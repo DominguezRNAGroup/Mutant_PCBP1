@@ -4,7 +4,7 @@ library(org.Hs.eg.db)
 
 
 rm(list=ls())
-setwd(dir = "~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/RSEM/RKO/")
+setwd(dir = "~")
 
 #Loading the files
 files <- list.files(pattern = "\\.genes.results$")
