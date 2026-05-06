@@ -1,5 +1,5 @@
 ---
-title: "Figures"
+title: ""
 output: html_document
 date: "2024-08-26"
 editor_options: 
@@ -17,8 +17,7 @@ library(org.Hs.eg.db)
 
 
 rm(list=ls())
-setwd(dir = "~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/RSEM/HCT_new//")
-setwd(dir = "/work/users/g/g/ggiri/PCBP1_Final/RNA-seq/Porter/RSEM")
+setwd(dir = "~")
 
 #Loading the files
 files <- list.files(pattern = "\\.genes.results$")
@@ -82,13 +81,7 @@ write.table(res,"KD_L100_vs_KD_DESEQ.txt",sep="\t",col.names = T,row.names = F,q
 
 ```
 
-#Loading tables ad plotting for volcano plot
-```{r}
-rm(list=ls())
-setwd(dir = "/work/users/g/g/ggiri/PCBP1_Final/RNA-seq/Porter/RSEM")
-df<-read.table("KD_L100_vs_KD_DESEQ.txt",header=T)
 
-```
 
 
 
