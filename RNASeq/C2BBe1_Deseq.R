@@ -5,7 +5,7 @@ library(dplyr)
 library(tidyr)
 
 rm(list=ls())
-setwd(dir = "~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/RSEM/C2BBE1/")
+setwd(dir = "~")
 
 #Whole cell
 files<-paste0(34:42,".genes.results")
