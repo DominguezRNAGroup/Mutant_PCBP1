@@ -13,10 +13,10 @@
 module load anaconda
 source activate Clipper_env
 
-Fastq="/work/users/g/g/ggiri/PCBP1_Final/eCLIP/Fastq"
-OutDir="/work/users/g/g/ggiri/PCBP1_Final/eCLIP"
-RepDir="/proj/RNA_lab/Gilbert/GENOME/Repeats_New/STAR"
-gDir="/work/users/g/g/ggiri/GENOME/Human/GENECODE/STAR"
+Fastq="eCLIP/Fastq"
+OutDir="eCLIP"
+RepDir="Repeats_New/STAR"
+gDir="Human/GENECODE/STAR"
 file=$1
 
 
