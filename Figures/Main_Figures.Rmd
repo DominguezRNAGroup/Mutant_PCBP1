@@ -128,12 +128,12 @@ library(ComplexUpset)
 library(tidyverse)
 library(UpSetR)
 
-pcbp1<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/PCBP1_muts.tsv",sep="\t",skip=1)
+pcbp1<-read.table("PCBP1_muts.tsv",sep="\t",skip=1)
 pcbp1<-pcbp1[which(pcbp1$V5 %in% c("L100P","L100Q","L102P","L102Q","L102R")),]
 
-apc<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/APC_muts.tsv",sep="\t",skip=1)
-kras<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/KRAS_muts.tsv",sep="\t",skip=1)
-tp53<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TP53_muts.tsv",sep="\t",skip=1)
+apc<-read.table("APC_muts.tsv",sep="\t",skip=1)
+kras<-read.table("KRAS_muts.tsv",sep="\t",skip=1)
+tp53<-read.table("TP53_muts.tsv",sep="\t",skip=1)
 
 apc<-apc[which(apc$V2 %in% pcbp1$V2),]
 kras<-kras[which(kras$V2 %in% pcbp1$V2),]
@@ -183,12 +183,12 @@ library(ComplexUpset)
 library(tidyverse)
 library(UpSetR)
 
-pcbp1<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/PCBP1_muts.tsv",sep="\t",skip=1)
+pcbp1<-read.table("PCBP1_muts.tsv",sep="\t",skip=1)
 pcbp1<-pcbp1[which(pcbp1$V5 %in% c("L100P","L100Q","L102P","L102Q","L102R")),]
 
-apc<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/APC_muts.tsv",sep="\t",skip=1)
-kras<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/KRAS_muts.tsv",sep="\t",skip=1)
-tp53<-read.table("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TP53_muts.tsv",sep="\t",skip=1)
+apc<-read.table("APC_muts.tsv",sep="\t",skip=1)
+kras<-read.table("KRAS_muts.tsv",sep="\t",skip=1)
+tp53<-read.table("TP53_muts.tsv",sep="\t",skip=1)
 
 apc<-apc[which(apc$V2 %in% pcbp1$V2),]
 kras<-kras[which(kras$V2 %in% pcbp1$V2),]
@@ -1805,7 +1805,7 @@ WT_IN<-read.table("Figure3/Data/Browsers/GG72_chr1_154155308_154157721.genomecov
 L100Q_IP<-read.table("Figure3/Data/Browsers/GG87_chr1_154155308_154157721.genomecov")
 L100Q_IN<-read.table("Figure3/Data/Browsers/GG76_chr1_154155308_154157721.genomecov")
 
-gene<-rtracklayer::import("~/Desktop/Dominguez_Lab/Chimera/Reference/Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
+gene<-rtracklayer::import("Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
 TPM3<-gene[which(gene$gene_name=="TPM3"),]
 TPM3<-gene[which(gene$transcript_id=="ENST00000368533"),]
 TPM3<-TPM3[which(TPM3$type %in% c("CDS","five_prime_utr","three_prime_utr")),]
@@ -1934,7 +1934,7 @@ WT_IN<-read.table("Figure3/Data/Browsers/GG72_chrX_153796407_153796516.genomecov
 L100Q_IP<-read.table("Figure3/Data/Browsers/GG87_chrX_153796407_153796516.genomecov")
 L100Q_IN<-read.table("Figure3/Data/Browsers/GG76_chrX_153796407_153796516.genomecov")
 
-gene<-rtracklayer::import("~/Desktop/Dominguez_Lab/Chimera/Reference/Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
+gene<-rtracklayer::import("Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
 SSR4<-gene[which(gene$gene_name=="SSR4"),]
 SSR4<-SSR4[which(SSR4$transcript_id=="ENST00000320857"),]
 SSR4<-SSR4[which(SSR4$type %in% c("CDS","five_prime_utr","three_prime_utr")),]
@@ -2061,7 +2061,7 @@ WT_IN<-read.table("Figure3/Data/Browsers/GG72_chr5_138465617_138465754.genomecov
 L100Q_IP<-read.table("Figure3/Data/Browsers/GG87_chr5_138465617_138465754.genomecov")
 L100Q_IN<-read.table("Figure3/Data/Browsers/GG76_chr5_138465617_138465754.genomecov")
 
-gene<-rtracklayer::import("~/Desktop/Dominguez_Lab/Chimera/Reference/Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
+gene<-rtracklayer::import("Homo_sapiens.GRCh38.108.chr.gtf") %>% data.frame()
 EGR1<-gene[which(gene$gene_name=="EGR1"),]
 EGR1<-EGR1[which(EGR1$transcript_id=="ENST00000239938"),]
 EGR1<-EGR1[which(EGR1$type %in% c("CDS","five_prime_utr","three_prime_utr")),]
@@ -2750,9 +2750,6 @@ noRNA<-noRNA %>% mutate(Local=case_when(
   TRUE~"Other"
 ))
 
-#write.table(RNA,"~/Desktop/Dominguez_Lab/PCBP1_FINAL/Cytoscape/RNA.txt",sep="\t",col.names = T,row.names = F,quote = F)
-#write.table(noRNA,"~/Desktop/Dominguez_Lab/PCBP1_FINAL/Cytoscape/noRNA.txt",sep="\t",col.names = T,row.names = F,quote = F)
-
 #Plotting
 common<-read.table("Figure5/Data/MS-IP_Common.txt",header=T)
 RNA<-RNA[which(RNA$PG.Genes %in% common$Gene),]
@@ -3267,7 +3264,7 @@ ggsave("Figure5/Fig5A-Leg.pdf",legend,width=1,height=2)
 #Figure 4B
 ```{r, fig.width=1.2, fig.height=1.5}
 rm(list=ls())
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 L100Q<-HCT$Parent_L100Q
 L100Q<-lapply(L100Q, function(x){y<-x[which(x$FDR<0.05 & x$PValue<0.05 & abs(x$IncLevelDifference)>0.1 & 
@@ -3305,7 +3302,7 @@ ggsave("Figure5/Fig5B.pdf",width=0.5,height=1.5)
 
 #Figure4C
 ```{r, fig.width=1.5, fig.height=1.5}
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 L100Q<-HCT$Parent_L100Q$SE
 L100Q_sub<-L100Q[which(L100Q$Total_Count_1>50 & L100Q$Total_Count_2>50),]
@@ -3359,7 +3356,7 @@ ggsave("Figure5/Fig5C.png",width=1.5,height=1.5)
 #Figure 4D
 ```{r, fig.width=1.2, fig.height=1.5}
 rm(list=ls())
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 KO<-HCT$Parent_KO
 KO<-lapply(KO, function(x){y<-x[which(x$FDR<0.05 & x$PValue<0.05 & abs(x$IncLevelDifference)>0.1 & 
@@ -3397,7 +3394,7 @@ ggsave("Figure5/Fig5D.pdf",width=0.5,height=1.5)
 
 #Figure 4E
 ```{r, fig.width=1.5, fig.height=1.5}
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 KO<-HCT$Parent_KO$SE
 KO_sub<-KO[which(KO$Total_Count_1>50 & KO$Total_Count_2>50),]
@@ -3453,7 +3450,7 @@ ggsave("Figure5/Fig5E.png",width=1.5,height=1.5)
 ```{r}
 rm(list=ls())
 
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 HCT_KO<-HCT$Parent_KO$SE
 HCT_L100Q<-HCT$Parent_L100Q$SE
@@ -3489,7 +3486,7 @@ ggsave("Figure5/Fig5F.pdf",width=1.15,height=0.84)
 ```{r,fig.width=1, fig.height=1}
 rm(list=ls())
 
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 HCT_KO<-HCT$Parent_KO$SE
 HCT_L100Q<-HCT$Parent_L100Q$SE
@@ -3533,7 +3530,7 @@ ggsave("Figure5/Fig5F2.pdf",width=1.2,height=1)
 #Figure 4G
 ```{r,fig.width=3, fig.height=3}
 rm(list=ls())
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 
 KO<-HCT$Parent_KO$SE
 L1001<-HCT$Parent_L100Q$SE
@@ -3605,7 +3602,7 @@ dev.off()
 
 #Figure 4H-J
 ```{r,fig.width=1.5, fig.height=1.5}
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 L100_1<-HCT$Parent_L100Q$SE
 L100_2<-HCT$Parent_F10$SE
 
@@ -3624,8 +3621,8 @@ L100_2$Identifier<-paste(L100_2$chr,L100_2$exonStart_0base,L100_2$exonEnd,L100_2
 common_events<-unique(c(L100_1$Identifier,L100_2$Identifier))
 
 #Loading TCGA events
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt",header = T)
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt",header = T)
+SE<-read.table("TCGA_PSI_SE.txt",header = T)
+PE<-read.table("TCGA_PSI_PE.txt",header = T)
 
 colnames(SE)<-gsub("[.]","-",colnames(SE))
 colnames(PE)<-gsub("[.]","-",colnames(PE))
@@ -3647,7 +3644,7 @@ table(rownames(SE_sub) == rownames(PE_sub))
 all_PSI<-cbind(SE_sub,PE_sub)
 
 ###plotting each event
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$Sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="-"))})
 mut<-mut[which(mut$Protein_APC==1),]
 mut$Sample.ID<-sapply(mut$Sample.ID,function(x){paste(strsplit(x,"-")[[1]][1:3],collapse = "-")})
@@ -4594,7 +4591,7 @@ ggsave("Figure5/SH3BP1_poly_TPM.pdf",width=2,height=1.2)
 #Figure 4L-Maybe
 ```{r}
 rm(list=ls())
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 L100_1<-HCT$Parent_L100Q$SE
 L100_2<-HCT$Parent_F10$SE
 
@@ -4613,8 +4610,8 @@ L100_2$Identifier<-paste(L100_2$chr,L100_2$exonStart_0base,L100_2$exonEnd,L100_2
 common_events<-unique(c(L100_1$Identifier,L100_2$Identifier))
 
 #Loading TCGA events
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt",header = T)
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt",header = T)
+SE<-read.table("TCGA_PSI_SE.txt",header = T)
+PE<-read.table("TCGA_PSI_PE.txt",header = T)
 
 colnames(SE)<-gsub("[.]","-",colnames(SE))
 colnames(PE)<-gsub("[.]","-",colnames(PE))
@@ -4636,7 +4633,7 @@ table(rownames(SE_sub) == rownames(PE_sub))
 all_PSI<-cbind(SE_sub,PE_sub)
 
 ###plotting each event
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$Sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="-"))})
 mut<-mut[which(mut$Protein_APC==1),]
 mut$Sample.ID<-sapply(mut$Sample.ID,function(x){paste(strsplit(x,"-")[[1]][1:3],collapse = "-")})
@@ -7661,9 +7658,9 @@ ________________________________________________________________________________
 #Just TCGA
 ```{r}
 rm(list=ls())
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt")
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt")
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+SE<-read.table("TCGA_PSI_SE.txt")
+PE<-read.table("TCGA_PSI_PE.txt")
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="."))})
 mut_sub<-mut[which(mut$Protein_APC ==1),]
 
@@ -7755,9 +7752,9 @@ ggsave("New_Plots/TCGA_update_volcano.png",volcano,width = 1.5,height = 1.5)
 #TCGA and HCT
 ```{r}
 rm(list=ls())
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt")
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt")
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+SE<-read.table("TCGA_PSI_SE.txt")
+PE<-read.table("TCGA_PSI_PE.txt")
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="."))})
 mut_sub<-mut[which(mut$Protein_APC ==1),]
 
@@ -7796,7 +7793,7 @@ df$Trend[which(df$FDR<0.2 & df$difference>0.1)]<-"up"
 
 
 #loading HCT
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 L100_1<-HCT$Parent_L100Q$SE
 L100_2<-HCT$Parent_F10$SE
 
@@ -7854,9 +7851,9 @@ ggsave("New_Plots/TCGA_HCT_cor.pdf",width = 1.5,height = 1.5)
 
 ```{r}
 rm(list=ls())
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt")
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt")
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+SE<-read.table("TCGA_PSI_SE.txt")
+PE<-read.table("TCGA_PSI_PE.txt")
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="."))})
 mut_sub<-mut[which(mut$Protein_APC ==1),]
 
@@ -7894,7 +7891,7 @@ df$Group[which(df$FDR<0.2 & df$difference<(-0.1))]<-"down"
 df$Group[which(df$FDR<0.2 & df$difference>0.1)]<-"up"
 
 #LoadingHCT
-load("~/Desktop/Dominguez_Lab/PCBP1_FINAL/RNA-Seq/rMATS/HCT_rMATS.RData")
+load("HCT_rMATS.RData")
 L100_1<-HCT$Parent_L100Q$SE
 L100_2<-HCT$Parent_F10$SE
 
@@ -8134,8 +8131,8 @@ ggsave("Burkitt/SEC.pdf",height = 1,width = 2)
 ```{r,fig.width=1.5, fig.height=1.5}
 rm(list=ls())
 #Loading TCGA events
-SE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_SE.txt",header = T)
-PE<-read.table("~/Desktop/Dominguez_Lab/PCBP1_FINAL/TCGA/TCGA_PSI_PE.txt",header = T)
+SE<-read.table("TCGA_PSI_SE.txt",header = T)
+PE<-read.table("TCGA_PSI_PE.txt",header = T)
 
 colnames(SE)<-gsub("[.]","-",colnames(SE))
 colnames(PE)<-gsub("[.]","-",colnames(PE))
@@ -8154,7 +8151,7 @@ table(rownames(SE_sub) == rownames(PE_sub))
 all_PSI<-cbind(SE_sub,PE_sub)
 
 ###plotting each event
-mut<-read.delim("~/Desktop/Dominguez_Lab/PCBP1/TCGA/Muts/TCGA_mutation.txt",header=T)
+mut<-read.delim("TCGA_mutation.txt",header=T)
 mut$Sample<-sapply(mut$Sample.ID,function(x){y<-strsplit(x,"-")[[1]];return(paste(y[1:3],collapse="-"))})
 mut<-mut[which(mut$Protein_APC==1),]
 mut$Sample.ID<-sapply(mut$Sample.ID,function(x){paste(strsplit(x,"-")[[1]][1:3],collapse = "-")})
