@@ -533,7 +533,6 @@ ggsave("Figure 1-2 Combined /Fig1E.pdf",width=2,height = 1)
 #Fig1F
 ```{r,fig.width=2, fig.height=1}
 rm(list=ls())
-setwd("/Volumes/pharm/Groups/Dominguez Lab/PCBP1-Manuscript/Code and Data")
 vol<-read.table("Figure 1-2 Combined/Figure 1/Data/AFM/txt_data/AFM_volumes.txt",header=T,sep="\t")
 vol_long<-reshape2::melt(vol)
 vol_long$Group<-cut(vol_long$value,breaks = seq(0,300,10),labels=seq(0,300,10)[-1])
@@ -8016,7 +8015,6 @@ ggsave("FigureS5/FigS5F.png",width=1.5,height=1.5)
 #Nor Tumor
 ```{r}
 rm(list=ls())\
-setwd("/Volumes/pharm/Groups/Dominguez Lab/PCBP1-Manuscript/Code and Data")
 
 df<-read.table("Figure6/Tumor_Normalized_Count_260120.txt",header=T,sep="\t")
 colnames(df)<-c("WT","L100Q")
