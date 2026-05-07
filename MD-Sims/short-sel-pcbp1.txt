@@ -1,0 +1,1 @@
+(backbone or (name =~ 'N.*') or (name =~ 'O.*') or (name CB)) and (resSeq > 12)
