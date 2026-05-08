@@ -1,0 +1,780 @@
+2025-11-04 09:59:17,802 - acemd - WARNING - New ACEMD version (4.0.17) is available. You are currently on (0.0.0). We recommend you create a new conda environment with the latest ACEMD version https://software.acellera.com/acemd/install.html 
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,027 - acemd - INFO - # ACEMD version 0.0.0
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,027 - acemd - INFO - # Copyright (C) 2017-2025 Acellera (www.acellera.com)
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,027 - acemd - INFO - # By using ACEMD, you accept the terms and conditions of the ACEMD license
+2025-11-04 09:59:18,027 - acemd - INFO - # Check the license by running "acemd --license"
+2025-11-04 09:59:18,027 - acemd - INFO - # More details: https://software.acellera.com/acemd/licence.html
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,027 - acemd - INFO - # When publishing, please cite:
+2025-11-04 09:59:18,027 - acemd - INFO - #   ACEMD: Accelerating Biomolecular Dynamics in the Microsecond Time Scale
+2025-11-04 09:59:18,027 - acemd - INFO - #   M. J. Harvey, G. Giupponi and G. De Fabritiis,
+2025-11-04 09:59:18,027 - acemd - INFO - #   J Chem. Theory. Comput. 2009 5(6), pp1632-1639
+2025-11-04 09:59:18,027 - acemd - INFO - #   DOI: 10.1021/ct9000685
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,027 - acemd - INFO - #   OpenMM 8: Molecular Dynamics Simulation with Machine Learning Potentials
+2025-11-04 09:59:18,027 - acemd - INFO - #   P. Eastman, R. Galvelis, R. P. Peláez, C. R. A. Abreu, S. E. Farr, E. Gallicchio,
+2025-11-04 09:59:18,027 - acemd - INFO - #   A. Gorenko, M. M. Henry, F. Hu, J. Huang, A. Krämer, J. Michel, J. A. Mitchell,
+2025-11-04 09:59:18,027 - acemd - INFO - #   V. S. Pande, J. PGLM Rodrigues, J. Rodriguez-Guerra, A. C. Simmonett, S. Singh,
+2025-11-04 09:59:18,027 - acemd - INFO - #   J. Swails, P. Turner, Y. Wang, I. Zhang, J. D. Chodera, G. De Fabritiis, and T. E. Markland
+2025-11-04 09:59:18,027 - acemd - INFO - #   J. Phys. Chem. B 2024 128 (1), 109-116
+2025-11-04 09:59:18,027 - acemd - INFO - #   DOI: 10.1021/acs.jpcb.3c06662
+2025-11-04 09:59:18,027 - acemd - INFO - #
+2025-11-04 09:59:18,202 - acemd - WARNING - # Parsing input file with old input file parser. We recommend using the new YAML or JSON inputs instead.
+2025-11-04 09:59:18,203 - acemd - WARNING - # Deprecation: The `temperature` option is deprecated in favor of the `velocities` option which can accept a temperature value to generate initial velocities from a Maxwell-Boltzmann distribution
+2025-11-04 09:59:18,203 - acemd - WARNING - # Deprecation: `parmfile` is deprecated in favor of `structure`. Ignoring the parmfile option
+2025-11-04 09:59:18,203 - acemd - WARNING - # Deprecation: `atomrestraint` is deprecated in favor of `extforces`
+2025-11-04 09:59:18,203 - acemd - INFO - # Writing input file in the new YAML format to input.yaml.new. Feel free to use it in future runs by renaming it to input.yaml
+2025-11-04 09:59:18,205 - acemd - INFO - #
+2025-11-04 09:59:18,205 - acemd - INFO - # Input arguments
+2025-11-04 09:59:18,205 - acemd - INFO - #   barostat: True
+2025-11-04 09:59:18,205 - acemd - INFO - #   barostatanisotropic: False
+2025-11-04 09:59:18,205 - acemd - INFO - #   barostatconstratio: False
+2025-11-04 09:59:18,205 - acemd - INFO - #   barostatconstxy: False
+2025-11-04 09:59:18,205 - acemd - INFO - #   barostatpressure: 1.01325
+2025-11-04 09:59:18,205 - acemd - INFO - #   boxsize: [92.19100189208984, 82.25800323486328, 67.01499938964844]
+2025-11-04 09:59:18,205 - acemd - INFO - #   coordinates: structure.pdb
+2025-11-04 09:59:18,205 - acemd - INFO - #   cutoff: 9
+2025-11-04 09:59:18,205 - acemd - INFO - #   device: None
+2025-11-04 09:59:18,205 - acemd - INFO - #   extforces: [<acemd.restraints.PositionalRestraint object at 0x150e61d4a350>, <acemd.restraints.PositionalRestraint object at 0x150e61d4a3e0>]
+2025-11-04 09:59:18,205 - acemd - INFO - #   fbrefcoor: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   hbondconstr: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   hmr: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   hydrogenmass: 4.032
+2025-11-04 09:59:18,207 - acemd - INFO - #   implicitsolvent: False
+2025-11-04 09:59:18,207 - acemd - INFO - #   minimize: 500
+2025-11-04 09:59:18,207 - acemd - INFO - #   ncpus: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   nnp: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   parameters: None
+2025-11-04 09:59:18,207 - acemd - INFO - #   platform: CUDA
+2025-11-04 09:59:18,207 - acemd - INFO - #   plumedfile: None
+2025-11-04 09:59:18,208 - acemd - INFO - #   pme: True
+2025-11-04 09:59:18,208 - acemd - INFO - #   precision: mixed
+2025-11-04 09:59:18,208 - acemd - INFO - #   restart: True
+2025-11-04 09:59:18,208 - acemd - INFO - #   rigidwater: None
+2025-11-04 09:59:18,208 - acemd - INFO - #   run: 2500000
+2025-11-04 09:59:18,208 - acemd - INFO - #   slowperiod: 1
+2025-11-04 09:59:18,208 - acemd - INFO - #   stepzero: False
+2025-11-04 09:59:18,208 - acemd - INFO - #   structure: structure.prmtop
+2025-11-04 09:59:18,208 - acemd - INFO - #   switchdistance: 7.5
+2025-11-04 09:59:18,208 - acemd - INFO - #   switching: True
+2025-11-04 09:59:18,208 - acemd - INFO - #   thermostat: True
+2025-11-04 09:59:18,208 - acemd - INFO - #   thermostatdamping: 1
+2025-11-04 09:59:18,208 - acemd - INFO - #   thermostattemperature: 298
+2025-11-04 09:59:18,208 - acemd - INFO - #   timestep: 4
+2025-11-04 09:59:18,208 - acemd - INFO - #   trajectoryfile: output.xtc
+2025-11-04 09:59:18,208 - acemd - INFO - #   trajectoryperiod: 25000
+2025-11-04 09:59:18,208 - acemd - INFO - #   trajforcefile: None
+2025-11-04 09:59:18,208 - acemd - INFO - #   trajvelocityfile: None
+2025-11-04 09:59:18,208 - acemd - INFO - #   velocities: 298
+2025-11-04 09:59:27,569 - acemd - INFO - #
+2025-11-04 09:59:27,570 - acemd - INFO - # Initializing engine
+2025-11-04 09:59:27,570 - acemd - INFO - # Version: 8.2
+2025-11-04 09:59:27,570 - acemd - INFO - #   Available platforms
+2025-11-04 09:59:27,570 - acemd - INFO - #     Reference
+2025-11-04 09:59:27,570 - acemd - INFO - #     CPU
+2025-11-04 09:59:27,570 - acemd - INFO - #     CUDA
+2025-11-04 09:59:27,570 - acemd - INFO - #     OpenCL
+2025-11-04 09:59:27,570 - acemd - INFO - # Selected platform: CUDA
+2025-11-04 09:59:27,570 - acemd - INFO - # Platform properties
+2025-11-04 09:59:27,570 - acemd - INFO - #   DeviceIndex: 0
+2025-11-04 09:59:27,570 - acemd - INFO - #   DeviceName: NVIDIA H100 80GB HBM3 MIG 2g.20gb
+2025-11-04 09:59:27,570 - acemd - INFO - #   UseBlockingSync: false
+2025-11-04 09:59:27,570 - acemd - INFO - #   Precision: mixed
+2025-11-04 09:59:27,570 - acemd - INFO - #   UseCpuPme: false
+2025-11-04 09:59:27,570 - acemd - INFO - #   CudaCompiler: 
+2025-11-04 09:59:27,570 - acemd - INFO - #   TempDirectory: /tmp
+2025-11-04 09:59:27,570 - acemd - INFO - #   CudaHostCompiler: 
+2025-11-04 09:59:27,570 - acemd - INFO - #   DisablePmeStream: false
+2025-11-04 09:59:27,570 - acemd - INFO - #   DeterministicForces: false
+2025-11-04 09:59:27,570 - acemd - INFO - #
+2025-11-04 09:59:27,570 - acemd - INFO - # Creating simulation system
+2025-11-04 09:59:27,570 - acemd - INFO - #   Ensemble: NPT
+2025-11-04 09:59:27,570 - acemd - INFO - #   Number of particles: 47558
+2025-11-04 09:59:27,902 - acemd - INFO - #   Number of degrees of freedom 96642
+2025-11-04 09:59:27,902 - acemd - INFO - #   Periodic box size: 92.191 82.258 67.015 A
+2025-11-04 09:59:27,902 - acemd - INFO - #
+2025-11-04 09:59:27,902 - acemd - INFO - # Integrator
+2025-11-04 09:59:27,902 - acemd - INFO - #   Type: LangevinMiddleIntegrator
+2025-11-04 09:59:27,902 - acemd - INFO - #   Step size: 4.00 fs
+2025-11-04 09:59:27,902 - acemd - INFO - #   Constraint tolerance: 1e-06
+2025-11-04 09:59:27,902 - acemd - INFO - #
+2025-11-04 09:59:27,902 - acemd - INFO - # Barostat
+2025-11-04 09:59:27,902 - acemd - INFO - #   Pressure: 1.01325 bar
+2025-11-04 09:59:27,902 - acemd - INFO - #   Temperature: 298.0 K
+2025-11-04 09:59:27,902 - acemd - INFO - #
+2025-11-04 09:59:27,902 - acemd - INFO - # Non-bonded interactions
+2025-11-04 09:59:27,902 - acemd - INFO - #   Cutoff distance: 9.000 A
+2025-11-04 09:59:27,902 - acemd - INFO - #   Switching distance: 7.500 A
+2025-11-04 09:59:27,903 - acemd - INFO - #   PME: Ewald tolerance: 0.0005
+2025-11-04 09:59:27,903 - acemd - INFO - #   Reaction field dielectric: 78.5
+2025-11-04 09:59:27,903 - acemd - INFO - #
+2025-11-04 09:59:27,903 - acemd - INFO - # Hydrogen constraints
+2025-11-04 09:59:27,903 - acemd - INFO - #   Bonds involving hydrogen are constrained
+2025-11-04 09:59:27,903 - acemd - INFO - #   Making water molecules rigid
+2025-11-04 09:59:27,903 - acemd - INFO - #
+2025-11-04 09:59:27,903 - acemd - INFO - # Heavy hydrogen mass repartitioning
+2025-11-04 09:59:27,903 - acemd - INFO - #   Hydrogen mass increased to 4.032 amu
+2025-11-04 09:59:28,376 - acemd - INFO - #
+2025-11-04 09:59:28,376 - acemd - INFO - # External forces
+2025-11-04 09:59:28,656 - acemd - INFO - #   External force: 0
+2025-11-04 09:59:28,656 - acemd - INFO - #     Type: PositionalRestraint
+2025-11-04 09:59:28,656 - acemd - INFO - #     Atom selection: "protein and name CA"
+2025-11-04 09:59:28,656 - acemd - INFO - #     Axes: xyz
+2025-11-04 09:59:28,656 - acemd - INFO - #     FB width: [0.00, 0.00, 0.00] Å
+2025-11-04 09:59:28,656 - acemd - INFO - #     Number of atoms: 179
+2025-11-04 09:59:28,656 - acemd - INFO - #     Setpoints
+2025-11-04 09:59:28,656 - acemd - INFO - #       0         1.00 kcal/mol/Å^2 @ step 0
+2025-11-04 09:59:28,656 - acemd - INFO - #       1         0.00 kcal/mol/Å^2 @ step 1250000
+2025-11-04 09:59:28,784 - acemd - INFO - #   External force: 1
+2025-11-04 09:59:28,784 - acemd - INFO - #     Type: PositionalRestraint
+2025-11-04 09:59:28,784 - acemd - INFO - #     Atom selection: "protein and noh and not name CA"
+2025-11-04 09:59:28,784 - acemd - INFO - #     Axes: xyz
+2025-11-04 09:59:28,784 - acemd - INFO - #     FB width: [0.00, 0.00, 0.00] Å
+2025-11-04 09:59:28,784 - acemd - INFO - #     Number of atoms: 1265
+2025-11-04 09:59:28,784 - acemd - INFO - #     Setpoints
+2025-11-04 09:59:28,784 - acemd - INFO - #       0         0.10 kcal/mol/Å^2 @ step 0
+2025-11-04 09:59:28,784 - acemd - INFO - #       1         0.00 kcal/mol/Å^2 @ step 1250000
+2025-11-04 09:59:29,124 - acemd - INFO - #
+2025-11-04 09:59:29,124 - acemd - INFO - # Removing bonded terms with zero force constants
+2025-11-04 09:59:29,124 - acemd - INFO - #   Harmonic bond interations
+2025-11-04 09:59:29,124 - acemd - INFO - #     Initial number of terms: 47507
+2025-11-04 09:59:29,984 - acemd - INFO - #     Optimized number of terms: 47507
+2025-11-04 09:59:29,984 - acemd - INFO - #   Torsion interactions
+2025-11-04 09:59:29,984 - acemd - INFO - #     Initial number of terms: 12770
+2025-11-04 09:59:30,029 - acemd - INFO - #     Optimized number of terms: 9672
+2025-11-04 09:59:30,766 - acemd.minimizer - INFO - #
+2025-11-04 09:59:30,766 - acemd.minimizer - INFO - # Minimizing system with CG for 500 steps
+2025-11-04 09:59:30,766 - acemd.minimizer - INFO - #       Step      Potential   Max Force Comp.
+2025-11-04 09:59:30,766 - acemd.minimizer - INFO - #                [kcal/mol]      [kcal/mol/A]
+2025-11-04 09:59:31,323 - acemd.minimizer - INFO -            0   3737135.1921    40576966.8693
+2025-11-04 09:59:31,323 - acemd.minimizer - INFO - # WARNING: due to large initial force components (40576966.87) the minimization has to switch to the CPU platform
+2025-11-04 09:59:31,323 - acemd.minimizer - INFO - # Creating an auxilary platform for minimization
+2025-11-04 09:59:33,348 - acemd.minimizer - INFO -            1    300648.4637       68458.4298
+2025-11-04 09:59:33,615 - acemd.minimizer - INFO - # Switching back to the initial platform
+2025-11-04 09:59:33,880 - acemd.minimizer - INFO -            2    -74815.1655       18401.2781
+2025-11-04 09:59:33,915 - acemd.minimizer - INFO -            3    -99526.0045        9209.9816
+2025-11-04 09:59:33,946 - acemd.minimizer - INFO -            4   -114283.1035        7985.4192
+2025-11-04 09:59:33,977 - acemd.minimizer - INFO -            5   -123422.5229        2495.1409
+2025-11-04 09:59:34,008 - acemd.minimizer - INFO -            6   -133537.8146        1389.4483
+2025-11-04 09:59:34,036 - acemd.minimizer - INFO -            7   -139791.9749         733.1721
+2025-11-04 09:59:34,064 - acemd.minimizer - INFO -            8   -143799.4489         800.0328
+2025-11-04 09:59:34,092 - acemd.minimizer - INFO -            9   -147903.0832         954.4236
+2025-11-04 09:59:34,119 - acemd.minimizer - INFO -           10   -151483.2504         372.2300
+2025-11-04 09:59:34,147 - acemd.minimizer - INFO -           11   -154865.4009         593.4104
+2025-11-04 09:59:34,175 - acemd.minimizer - INFO -           12   -157304.0798         451.2042
+2025-11-04 09:59:34,202 - acemd.minimizer - INFO -           13   -159196.9451         359.5402
+2025-11-04 09:59:34,230 - acemd.minimizer - INFO -           14   -160877.4148         387.9152
+2025-11-04 09:59:34,257 - acemd.minimizer - INFO -           15   -162478.3585         468.7370
+2025-11-04 09:59:34,285 - acemd.minimizer - INFO -           16   -164333.8375         329.2089
+2025-11-04 09:59:34,312 - acemd.minimizer - INFO -           17   -165748.7890         267.3909
+2025-11-04 09:59:34,344 - acemd.minimizer - INFO -           18   -167001.6815         277.4942
+2025-11-04 09:59:34,371 - acemd.minimizer - INFO -           19   -168040.0093         337.8144
+2025-11-04 09:59:34,399 - acemd.minimizer - INFO -           20   -168947.2628         289.4198
+2025-11-04 09:59:34,426 - acemd.minimizer - INFO -           21   -169961.1863         325.5482
+2025-11-04 09:59:34,453 - acemd.minimizer - INFO -           22   -171093.4153         241.4238
+2025-11-04 09:59:34,480 - acemd.minimizer - INFO -           23   -171796.8630         217.9178
+2025-11-04 09:59:34,508 - acemd.minimizer - INFO -           24   -172579.0531         274.5324
+2025-11-04 09:59:34,535 - acemd.minimizer - INFO -           25   -173241.8294         204.1945
+2025-11-04 09:59:34,562 - acemd.minimizer - INFO -           26   -173920.3880         267.9751
+2025-11-04 09:59:34,589 - acemd.minimizer - INFO -           27   -174536.9149         166.7815
+2025-11-04 09:59:34,615 - acemd.minimizer - INFO -           28   -175142.0539         237.4663
+2025-11-04 09:59:34,642 - acemd.minimizer - INFO -           29   -175745.3303         196.2979
+2025-11-04 09:59:34,669 - acemd.minimizer - INFO -           30   -176259.8931         127.5485
+2025-11-04 09:59:34,696 - acemd.minimizer - INFO -           31   -176763.7227         239.7277
+2025-11-04 09:59:34,722 - acemd.minimizer - INFO -           32   -177210.0987         158.6968
+2025-11-04 09:59:34,750 - acemd.minimizer - INFO -           33   -177763.4593         182.7786
+2025-11-04 09:59:34,776 - acemd.minimizer - INFO -           34   -178216.3247         128.4759
+2025-11-04 09:59:34,803 - acemd.minimizer - INFO -           35   -178649.0369         163.3536
+2025-11-04 09:59:34,834 - acemd.minimizer - INFO -           36   -179102.3864         137.2946
+2025-11-04 09:59:34,861 - acemd.minimizer - INFO -           37   -179493.4383         136.2373
+2025-11-04 09:59:34,888 - acemd.minimizer - INFO -           38   -179912.7965         175.2890
+2025-11-04 09:59:34,915 - acemd.minimizer - INFO -           39   -180290.5816         164.6950
+2025-11-04 09:59:34,942 - acemd.minimizer - INFO -           40   -180635.4896         158.6601
+2025-11-04 09:59:34,968 - acemd.minimizer - INFO -           41   -181018.2151         140.3413
+2025-11-04 09:59:34,995 - acemd.minimizer - INFO -           42   -181364.3473         160.9027
+2025-11-04 09:59:35,022 - acemd.minimizer - INFO -           43   -181689.0006         127.8159
+2025-11-04 09:59:35,051 - acemd.minimizer - INFO -           44   -182018.4936          96.9489
+2025-11-04 09:59:35,081 - acemd.minimizer - INFO -           45   -182348.1755         167.3437
+2025-11-04 09:59:35,111 - acemd.minimizer - INFO -           46   -182673.9050         101.3344
+2025-11-04 09:59:35,141 - acemd.minimizer - INFO -           47   -182955.1465         126.9725
+2025-11-04 09:59:35,171 - acemd.minimizer - INFO -           48   -183234.4310         143.0299
+2025-11-04 09:59:35,201 - acemd.minimizer - INFO -           49   -183509.1351         135.7548
+2025-11-04 09:59:35,231 - acemd.minimizer - INFO -           50   -183810.8649         143.9702
+2025-11-04 09:59:35,261 - acemd.minimizer - INFO -           51   -184065.9739         120.2080
+2025-11-04 09:59:35,291 - acemd.minimizer - INFO -           52   -184321.9721         130.5546
+2025-11-04 09:59:35,321 - acemd.minimizer - INFO -           53   -184597.6224         109.7667
+2025-11-04 09:59:35,360 - acemd.minimizer - INFO -           54   -184825.4534         120.9390
+2025-11-04 09:59:35,390 - acemd.minimizer - INFO -           55   -185078.0523         121.1183
+2025-11-04 09:59:35,419 - acemd.minimizer - INFO -           56   -185278.8901         101.3073
+2025-11-04 09:59:35,449 - acemd.minimizer - INFO -           57   -185532.0205         121.5502
+2025-11-04 09:59:35,479 - acemd.minimizer - INFO -           58   -185757.0614         102.7125
+2025-11-04 09:59:35,509 - acemd.minimizer - INFO -           59   -185965.1225          64.0570
+2025-11-04 09:59:35,538 - acemd.minimizer - INFO -           60   -186190.2047         139.1437
+2025-11-04 09:59:35,571 - acemd.minimizer - INFO -           61   -186402.1599          62.3811
+2025-11-04 09:59:35,601 - acemd.minimizer - INFO -           62   -186608.4352         118.9266
+2025-11-04 09:59:35,631 - acemd.minimizer - INFO -           63   -186779.7016          77.2961
+2025-11-04 09:59:35,662 - acemd.minimizer - INFO -           64   -186975.0397          87.8252
+2025-11-04 09:59:35,691 - acemd.minimizer - INFO -           65   -187177.7846          96.0774
+2025-11-04 09:59:35,719 - acemd.minimizer - INFO -           66   -187361.6752         105.4749
+2025-11-04 09:59:35,746 - acemd.minimizer - INFO -           67   -187521.7254          69.2411
+2025-11-04 09:59:35,773 - acemd.minimizer - INFO -           68   -187678.3048          80.1051
+2025-11-04 09:59:35,800 - acemd.minimizer - INFO -           69   -187854.2408          61.4652
+2025-11-04 09:59:35,827 - acemd.minimizer - INFO -           70   -188025.0045          78.7091
+2025-11-04 09:59:35,854 - acemd.minimizer - INFO -           71   -188180.7564          71.9533
+2025-11-04 09:59:35,885 - acemd.minimizer - INFO -           72   -188314.1461          61.9895
+2025-11-04 09:59:35,911 - acemd.minimizer - INFO -           73   -188460.6965          89.4379
+2025-11-04 09:59:35,938 - acemd.minimizer - INFO -           74   -188623.9297          79.8753
+2025-11-04 09:59:35,965 - acemd.minimizer - INFO -           75   -188777.6026          59.0448
+2025-11-04 09:59:35,992 - acemd.minimizer - INFO -           76   -188909.2646          56.8074
+2025-11-04 09:59:36,018 - acemd.minimizer - INFO -           77   -189031.5919          47.5091
+2025-11-04 09:59:36,045 - acemd.minimizer - INFO -           78   -189173.2517          78.6135
+2025-11-04 09:59:36,071 - acemd.minimizer - INFO -           79   -189317.7064          74.4394
+2025-11-04 09:59:36,098 - acemd.minimizer - INFO -           80   -189444.5473          80.1104
+2025-11-04 09:59:36,124 - acemd.minimizer - INFO -           81   -189568.8030          62.8210
+2025-11-04 09:59:36,151 - acemd.minimizer - INFO -           82   -189689.7114          86.1123
+2025-11-04 09:59:36,177 - acemd.minimizer - INFO -           83   -189820.1127          78.5367
+2025-11-04 09:59:36,203 - acemd.minimizer - INFO -           84   -189951.4754          70.2901
+2025-11-04 09:59:36,230 - acemd.minimizer - INFO -           85   -190058.2422          70.9202
+2025-11-04 09:59:36,257 - acemd.minimizer - INFO -           86   -190174.6381          59.9770
+2025-11-04 09:59:36,283 - acemd.minimizer - INFO -           87   -190293.1525          80.9028
+2025-11-04 09:59:36,309 - acemd.minimizer - INFO -           88   -190421.2240          48.3466
+2025-11-04 09:59:36,336 - acemd.minimizer - INFO -           89   -190528.6275          68.9516
+2025-11-04 09:59:36,366 - acemd.minimizer - INFO -           90   -190634.0626          62.6102
+2025-11-04 09:59:36,393 - acemd.minimizer - INFO -           91   -190753.3518          86.4709
+2025-11-04 09:59:36,420 - acemd.minimizer - INFO -           92   -190866.1413          48.5591
+2025-11-04 09:59:36,446 - acemd.minimizer - INFO -           93   -190960.9369          67.2650
+2025-11-04 09:59:36,473 - acemd.minimizer - INFO -           94   -191052.5368          46.5498
+2025-11-04 09:59:36,499 - acemd.minimizer - INFO -           95   -191150.4042          67.0372
+2025-11-04 09:59:36,526 - acemd.minimizer - INFO -           96   -191256.8883          65.6256
+2025-11-04 09:59:36,553 - acemd.minimizer - INFO -           97   -191350.3375          64.0239
+2025-11-04 09:59:36,579 - acemd.minimizer - INFO -           98   -191444.4539          62.7175
+2025-11-04 09:59:36,605 - acemd.minimizer - INFO -           99   -191532.9169          62.0216
+2025-11-04 09:59:36,632 - acemd.minimizer - INFO -          100   -191632.2590          62.9789
+2025-11-04 09:59:36,659 - acemd.minimizer - INFO -          101   -191724.3273          56.6973
+2025-11-04 09:59:36,685 - acemd.minimizer - INFO -          102   -191807.6493          46.3908
+2025-11-04 09:59:36,712 - acemd.minimizer - INFO -          103   -191891.1283          56.1684
+2025-11-04 09:59:36,738 - acemd.minimizer - INFO -          104   -191980.4561          65.3409
+2025-11-04 09:59:36,765 - acemd.minimizer - INFO -          105   -192063.5746          59.2145
+2025-11-04 09:59:36,791 - acemd.minimizer - INFO -          106   -192147.8573          61.9897
+2025-11-04 09:59:36,818 - acemd.minimizer - INFO -          107   -192231.7696          53.5085
+2025-11-04 09:59:36,848 - acemd.minimizer - INFO -          108   -192316.8246          67.7778
+2025-11-04 09:59:36,874 - acemd.minimizer - INFO -          109   -192406.3608          50.7007
+2025-11-04 09:59:36,901 - acemd.minimizer - INFO -          110   -192485.6601          48.6072
+2025-11-04 09:59:36,927 - acemd.minimizer - INFO -          111   -192559.0247          46.2586
+2025-11-04 09:59:36,954 - acemd.minimizer - INFO -          112   -192629.8207          49.2462
+2025-11-04 09:59:36,980 - acemd.minimizer - INFO -          113   -192699.1659          52.3717
+2025-11-04 09:59:37,007 - acemd.minimizer - INFO -          114   -192772.9200          47.5817
+2025-11-04 09:59:37,033 - acemd.minimizer - INFO -          115   -192851.0067          49.3390
+2025-11-04 09:59:37,060 - acemd.minimizer - INFO -          116   -192926.3515          50.8670
+2025-11-04 09:59:37,086 - acemd.minimizer - INFO -          117   -192999.5967          43.6940
+2025-11-04 09:59:37,113 - acemd.minimizer - INFO -          118   -193080.2405          65.9265
+2025-11-04 09:59:37,140 - acemd.minimizer - INFO -          119   -193153.2147          46.0657
+2025-11-04 09:59:37,167 - acemd.minimizer - INFO -          120   -193215.9500          60.5005
+2025-11-04 09:59:37,193 - acemd.minimizer - INFO -          121   -193274.2579          42.5335
+2025-11-04 09:59:37,220 - acemd.minimizer - INFO -          122   -193338.5568          52.3973
+2025-11-04 09:59:37,246 - acemd.minimizer - INFO -          123   -193412.2473          55.9234
+2025-11-04 09:59:37,272 - acemd.minimizer - INFO -          124   -193486.1975          51.9431
+2025-11-04 09:59:37,299 - acemd.minimizer - INFO -          125   -193555.2859          49.2206
+2025-11-04 09:59:37,329 - acemd.minimizer - INFO -          126   -193610.0563          35.6844
+2025-11-04 09:59:37,356 - acemd.minimizer - INFO -          127   -193666.1089          49.8608
+2025-11-04 09:59:37,382 - acemd.minimizer - INFO -          128   -193718.8624          39.4481
+2025-11-04 09:59:37,409 - acemd.minimizer - INFO -          129   -193773.9257          45.7827
+2025-11-04 09:59:37,435 - acemd.minimizer - INFO -          130   -193833.4453          51.1684
+2025-11-04 09:59:37,462 - acemd.minimizer - INFO -          131   -193886.8713          45.0415
+2025-11-04 09:59:37,488 - acemd.minimizer - INFO -          132   -193945.0566          38.8161
+2025-11-04 09:59:37,515 - acemd.minimizer - INFO -          133   -194003.4609          46.2427
+2025-11-04 09:59:37,541 - acemd.minimizer - INFO -          134   -194063.0411          45.8319
+2025-11-04 09:59:37,568 - acemd.minimizer - INFO -          135   -194118.5436          36.1988
+2025-11-04 09:59:37,595 - acemd.minimizer - INFO -          136   -194171.3755          49.2131
+2025-11-04 09:59:37,621 - acemd.minimizer - INFO -          137   -194225.6858          35.4368
+2025-11-04 09:59:37,648 - acemd.minimizer - INFO -          138   -194276.5567          36.6908
+2025-11-04 09:59:37,674 - acemd.minimizer - INFO -          139   -194330.0460          43.4812
+2025-11-04 09:59:37,701 - acemd.minimizer - INFO -          140   -194376.7052          32.6451
+2025-11-04 09:59:37,727 - acemd.minimizer - INFO -          141   -194427.7139          39.5255
+2025-11-04 09:59:37,753 - acemd.minimizer - INFO -          142   -194485.7825          49.2094
+2025-11-04 09:59:37,780 - acemd.minimizer - INFO -          143   -194531.7837          42.4564
+2025-11-04 09:59:37,810 - acemd.minimizer - INFO -          144   -194574.9754          38.5990
+2025-11-04 09:59:37,836 - acemd.minimizer - INFO -          145   -194623.1778          44.0357
+2025-11-04 09:59:37,863 - acemd.minimizer - INFO -          146   -194675.8301          43.9612
+2025-11-04 09:59:37,889 - acemd.minimizer - INFO -          147   -194724.4820          52.0620
+2025-11-04 09:59:37,916 - acemd.minimizer - INFO -          148   -194768.2896          38.2822
+2025-11-04 09:59:37,942 - acemd.minimizer - INFO -          149   -194818.8978          50.7172
+2025-11-04 09:59:37,969 - acemd.minimizer - INFO -          150   -194859.5474          43.6301
+2025-11-04 09:59:37,995 - acemd.minimizer - INFO -          151   -194899.7660          48.8557
+2025-11-04 09:59:38,022 - acemd.minimizer - INFO -          152   -194943.7340          46.8683
+2025-11-04 09:59:38,049 - acemd.minimizer - INFO -          153   -194993.3911          43.3732
+2025-11-04 09:59:38,075 - acemd.minimizer - INFO -          154   -195045.4400          52.2883
+2025-11-04 09:59:38,101 - acemd.minimizer - INFO -          155   -195089.5427          30.3003
+2025-11-04 09:59:38,128 - acemd.minimizer - INFO -          156   -195129.1121          44.0118
+2025-11-04 09:59:38,154 - acemd.minimizer - INFO -          157   -195169.2468          37.2045
+2025-11-04 09:59:38,181 - acemd.minimizer - INFO -          158   -195208.6594          32.8246
+2025-11-04 09:59:38,208 - acemd.minimizer - INFO -          159   -195247.2624          43.4592
+2025-11-04 09:59:38,235 - acemd.minimizer - INFO -          160   -195287.9706          36.0329
+2025-11-04 09:59:38,261 - acemd.minimizer - INFO -          161   -195326.2975          38.7401
+2025-11-04 09:59:38,292 - acemd.minimizer - INFO -          162   -195368.7111          41.3725
+2025-11-04 09:59:38,319 - acemd.minimizer - INFO -          163   -195404.2001          27.9459
+2025-11-04 09:59:38,345 - acemd.minimizer - INFO -          164   -195446.4168          43.3205
+2025-11-04 09:59:38,372 - acemd.minimizer - INFO -          165   -195481.4841          40.9036
+2025-11-04 09:59:38,399 - acemd.minimizer - INFO -          166   -195522.6520          28.3636
+2025-11-04 09:59:38,425 - acemd.minimizer - INFO -          167   -195561.7896          37.7557
+2025-11-04 09:59:38,452 - acemd.minimizer - INFO -          168   -195594.9842          29.4900
+2025-11-04 09:59:38,478 - acemd.minimizer - INFO -          169   -195628.6971          34.9985
+2025-11-04 09:59:38,505 - acemd.minimizer - INFO -          170   -195667.6542          35.4232
+2025-11-04 09:59:38,532 - acemd.minimizer - INFO -          171   -195700.2911          28.0928
+2025-11-04 09:59:38,558 - acemd.minimizer - INFO -          172   -195735.9598          48.0295
+2025-11-04 09:59:38,585 - acemd.minimizer - INFO -          173   -195766.5182          30.5520
+2025-11-04 09:59:38,611 - acemd.minimizer - INFO -          174   -195796.8023          31.7298
+2025-11-04 09:59:38,638 - acemd.minimizer - INFO -          175   -195834.3302          53.5950
+2025-11-04 09:59:38,664 - acemd.minimizer - INFO -          176   -195869.4694          32.2927
+2025-11-04 09:59:38,691 - acemd.minimizer - INFO -          177   -195900.1935          34.8599
+2025-11-04 09:59:38,718 - acemd.minimizer - INFO -          178   -195933.1996          42.5014
+2025-11-04 09:59:38,744 - acemd.minimizer - INFO -          179   -195971.4479          37.3302
+2025-11-04 09:59:38,775 - acemd.minimizer - INFO -          180   -196004.7723          43.1271
+2025-11-04 09:59:38,801 - acemd.minimizer - INFO -          181   -196035.3558          36.1812
+2025-11-04 09:59:38,828 - acemd.minimizer - INFO -          182   -196067.9980          34.0846
+2025-11-04 09:59:38,855 - acemd.minimizer - INFO -          183   -196094.8885          38.9897
+2025-11-04 09:59:38,881 - acemd.minimizer - INFO -          184   -196129.7303          39.7388
+2025-11-04 09:59:38,908 - acemd.minimizer - INFO -          185   -196157.3119          34.2523
+2025-11-04 09:59:38,937 - acemd.minimizer - INFO -          186   -196189.2511          35.7468
+2025-11-04 09:59:38,966 - acemd.minimizer - INFO -          187   -196218.8824          42.1288
+2025-11-04 09:59:38,996 - acemd.minimizer - INFO -          188   -196248.0077          27.1126
+2025-11-04 09:59:39,025 - acemd.minimizer - INFO -          189   -196275.5009          27.6721
+2025-11-04 09:59:39,052 - acemd.minimizer - INFO -          190   -196302.6332          37.9757
+2025-11-04 09:59:39,079 - acemd.minimizer - INFO -          191   -196329.0629          27.8248
+2025-11-04 09:59:39,106 - acemd.minimizer - INFO -          192   -196356.2616          31.1048
+2025-11-04 09:59:39,136 - acemd.minimizer - INFO -          193   -196386.6378          40.7661
+2025-11-04 09:59:39,165 - acemd.minimizer - INFO -          194   -196414.8680          26.0237
+2025-11-04 09:59:39,195 - acemd.minimizer - INFO -          195   -196440.0984          32.5196
+2025-11-04 09:59:39,225 - acemd.minimizer - INFO -          196   -196466.1960          31.2506
+2025-11-04 09:59:39,255 - acemd.minimizer - INFO -          197   -196493.4665          27.7458
+2025-11-04 09:59:39,289 - acemd.minimizer - INFO -          198   -196520.5870          31.3667
+2025-11-04 09:59:39,318 - acemd.minimizer - INFO -          199   -196549.4797          26.9151
+2025-11-04 09:59:39,348 - acemd.minimizer - INFO -          200   -196577.5552          24.9985
+2025-11-04 09:59:39,378 - acemd.minimizer - INFO -          201   -196605.6393          35.1575
+2025-11-04 09:59:39,407 - acemd.minimizer - INFO -          202   -196636.7382          28.9506
+2025-11-04 09:59:39,436 - acemd.minimizer - INFO -          203   -196662.3143          21.8060
+2025-11-04 09:59:39,466 - acemd.minimizer - INFO -          204   -196689.9347          41.7639
+2025-11-04 09:59:39,496 - acemd.minimizer - INFO -          205   -196717.8636          26.2906
+2025-11-04 09:59:39,527 - acemd.minimizer - INFO -          206   -196742.9264          24.6347
+2025-11-04 09:59:39,556 - acemd.minimizer - INFO -          207   -196767.6384          42.6295
+2025-11-04 09:59:39,582 - acemd.minimizer - INFO -          208   -196792.1163          26.0097
+2025-11-04 09:59:39,609 - acemd.minimizer - INFO -          209   -196816.8884          21.3135
+2025-11-04 09:59:39,635 - acemd.minimizer - INFO -          210   -196844.7040          37.4674
+2025-11-04 09:59:39,662 - acemd.minimizer - INFO -          211   -196867.5718          25.1140
+2025-11-04 09:59:39,689 - acemd.minimizer - INFO -          212   -196892.1519          24.9877
+2025-11-04 09:59:39,715 - acemd.minimizer - INFO -          213   -196915.4570          36.3729
+2025-11-04 09:59:39,742 - acemd.minimizer - INFO -          214   -196941.4485          26.5332
+2025-11-04 09:59:39,768 - acemd.minimizer - INFO -          215   -196968.8372          29.0269
+2025-11-04 09:59:39,798 - acemd.minimizer - INFO -          216   -196994.8584          41.7326
+2025-11-04 09:59:39,825 - acemd.minimizer - INFO -          217   -197020.1376          27.9707
+2025-11-04 09:59:39,852 - acemd.minimizer - INFO -          218   -197043.9029          27.8476
+2025-11-04 09:59:39,878 - acemd.minimizer - INFO -          219   -197067.1802          45.3265
+2025-11-04 09:59:39,905 - acemd.minimizer - INFO -          220   -197091.6992          31.1515
+2025-11-04 09:59:39,932 - acemd.minimizer - INFO -          221   -197115.4824          21.8519
+2025-11-04 09:59:39,959 - acemd.minimizer - INFO -          222   -197137.2057          40.8065
+2025-11-04 09:59:39,985 - acemd.minimizer - INFO -          223   -197159.8903          30.7746
+2025-11-04 09:59:40,012 - acemd.minimizer - INFO -          224   -197181.9789          19.8011
+2025-11-04 09:59:40,039 - acemd.minimizer - INFO -          225   -197204.3314          41.0185
+2025-11-04 09:59:40,066 - acemd.minimizer - INFO -          226   -197226.6120          29.5000
+2025-11-04 09:59:40,092 - acemd.minimizer - INFO -          227   -197246.6331          19.5645
+2025-11-04 09:59:40,119 - acemd.minimizer - INFO -          228   -197265.3168          40.7955
+2025-11-04 09:59:40,146 - acemd.minimizer - INFO -          229   -197284.2440          27.6574
+2025-11-04 09:59:40,172 - acemd.minimizer - INFO -          230   -197302.2300          14.7029
+2025-11-04 09:59:40,198 - acemd.minimizer - INFO -          231   -197324.8545          41.4979
+2025-11-04 09:59:40,225 - acemd.minimizer - INFO -          232   -197344.6615          42.2806
+2025-11-04 09:59:40,252 - acemd.minimizer - INFO -          233   -197364.2832          30.8862
+2025-11-04 09:59:40,281 - acemd.minimizer - INFO -          234   -197380.1939          22.9340
+2025-11-04 09:59:40,308 - acemd.minimizer - INFO -          235   -197399.7421          32.5253
+2025-11-04 09:59:40,334 - acemd.minimizer - INFO -          236   -197417.3705          26.8416
+2025-11-04 09:59:40,361 - acemd.minimizer - INFO -          237   -197434.8279          17.6818
+2025-11-04 09:59:40,388 - acemd.minimizer - INFO -          238   -197451.4840          24.9867
+2025-11-04 09:59:40,415 - acemd.minimizer - INFO -          239   -197469.1920          30.7779
+2025-11-04 09:59:40,441 - acemd.minimizer - INFO -          240   -197488.1048          24.3901
+2025-11-04 09:59:40,468 - acemd.minimizer - INFO -          241   -197508.0038          27.8923
+2025-11-04 09:59:40,495 - acemd.minimizer - INFO -          242   -197528.4907          25.8180
+2025-11-04 09:59:40,522 - acemd.minimizer - INFO -          243   -197548.1935          22.6656
+2025-11-04 09:59:40,549 - acemd.minimizer - INFO -          244   -197567.8308          33.2362
+2025-11-04 09:59:40,576 - acemd.minimizer - INFO -          245   -197590.9769          27.6603
+2025-11-04 09:59:40,603 - acemd.minimizer - INFO -          246   -197611.0947          21.2600
+2025-11-04 09:59:40,630 - acemd.minimizer - INFO -          247   -197630.8213          23.2532
+2025-11-04 09:59:40,656 - acemd.minimizer - INFO -          248   -197650.3041          32.3837
+2025-11-04 09:59:40,682 - acemd.minimizer - INFO -          249   -197670.0222          25.7536
+2025-11-04 09:59:40,709 - acemd.minimizer - INFO -          250   -197689.5551          18.5201
+2025-11-04 09:59:40,739 - acemd.minimizer - INFO -          251   -197708.9025          37.0111
+2025-11-04 09:59:40,765 - acemd.minimizer - INFO -          252   -197732.6212          40.9196
+2025-11-04 09:59:40,792 - acemd.minimizer - INFO -          253   -197749.5346          19.7896
+2025-11-04 09:59:40,818 - acemd.minimizer - INFO -          254   -197768.0010          18.1990
+2025-11-04 09:59:40,844 - acemd.minimizer - INFO -          255   -197786.4619          36.0193
+2025-11-04 09:59:40,871 - acemd.minimizer - INFO -          256   -197808.1807          27.7434
+2025-11-04 09:59:40,897 - acemd.minimizer - INFO -          257   -197823.5045          22.3770
+2025-11-04 09:59:40,923 - acemd.minimizer - INFO -          258   -197837.9666          22.8955
+2025-11-04 09:59:40,950 - acemd.minimizer - INFO -          259   -197855.8288          30.1743
+2025-11-04 09:59:40,976 - acemd.minimizer - INFO -          260   -197869.6958          24.6653
+2025-11-04 09:59:41,002 - acemd.minimizer - INFO -          261   -197886.6696          22.0041
+2025-11-04 09:59:41,029 - acemd.minimizer - INFO -          262   -197905.1667          21.0090
+2025-11-04 09:59:41,055 - acemd.minimizer - INFO -          263   -197924.2665          23.7638
+2025-11-04 09:59:41,082 - acemd.minimizer - INFO -          264   -197943.8845          21.4340
+2025-11-04 09:59:41,109 - acemd.minimizer - INFO -          265   -197964.4876          21.4577
+2025-11-04 09:59:41,135 - acemd.minimizer - INFO -          266   -197984.5741          21.6283
+2025-11-04 09:59:41,161 - acemd.minimizer - INFO -          267   -198001.2838          24.4542
+2025-11-04 09:59:41,188 - acemd.minimizer - INFO -          268   -198015.8361          27.0423
+2025-11-04 09:59:41,218 - acemd.minimizer - INFO -          269   -198035.3238          23.5537
+2025-11-04 09:59:41,244 - acemd.minimizer - INFO -          270   -198051.9818          25.9796
+2025-11-04 09:59:41,271 - acemd.minimizer - INFO -          271   -198068.0547          23.4655
+2025-11-04 09:59:41,297 - acemd.minimizer - INFO -          272   -198084.3583          26.5119
+2025-11-04 09:59:41,323 - acemd.minimizer - INFO -          273   -198100.3611          18.6707
+2025-11-04 09:59:41,349 - acemd.minimizer - INFO -          274   -198114.3581          24.3763
+2025-11-04 09:59:41,375 - acemd.minimizer - INFO -          275   -198131.3857          24.6858
+2025-11-04 09:59:41,401 - acemd.minimizer - INFO -          276   -198144.6233          23.1287
+2025-11-04 09:59:41,427 - acemd.minimizer - INFO -          277   -198162.9177          23.4856
+2025-11-04 09:59:41,454 - acemd.minimizer - INFO -          278   -198178.2363          22.2607
+2025-11-04 09:59:41,480 - acemd.minimizer - INFO -          279   -198191.9737          26.6855
+2025-11-04 09:59:41,506 - acemd.minimizer - INFO -          280   -198205.8259          21.2768
+2025-11-04 09:59:41,533 - acemd.minimizer - INFO -          281   -198219.0403          24.4127
+2025-11-04 09:59:41,558 - acemd.minimizer - INFO -          282   -198230.7339          19.2457
+2025-11-04 09:59:41,585 - acemd.minimizer - INFO -          283   -198245.5201          20.9483
+2025-11-04 09:59:41,612 - acemd.minimizer - INFO -          284   -198258.5916          24.1449
+2025-11-04 09:59:41,638 - acemd.minimizer - INFO -          285   -198272.3601          27.6970
+2025-11-04 09:59:41,665 - acemd.minimizer - INFO -          286   -198287.5589          23.7613
+2025-11-04 09:59:41,695 - acemd.minimizer - INFO -          287   -198301.4724          22.0472
+2025-11-04 09:59:41,721 - acemd.minimizer - INFO -          288   -198313.3966          22.1334
+2025-11-04 09:59:41,747 - acemd.minimizer - INFO -          289   -198329.2647          25.1399
+2025-11-04 09:59:41,773 - acemd.minimizer - INFO -          290   -198342.3738          21.8251
+2025-11-04 09:59:41,799 - acemd.minimizer - INFO -          291   -198359.0362          16.1383
+2025-11-04 09:59:41,824 - acemd.minimizer - INFO -          292   -198376.0898          23.1388
+2025-11-04 09:59:41,851 - acemd.minimizer - INFO -          293   -198393.6494          27.1261
+2025-11-04 09:59:41,876 - acemd.minimizer - INFO -          294   -198406.7526          23.1005
+2025-11-04 09:59:41,902 - acemd.minimizer - INFO -          295   -198423.8120          18.4064
+2025-11-04 09:59:41,928 - acemd.minimizer - INFO -          296   -198434.1719          21.7331
+2025-11-04 09:59:41,954 - acemd.minimizer - INFO -          297   -198445.9892          23.8083
+2025-11-04 09:59:41,980 - acemd.minimizer - INFO -          298   -198459.2597          18.4174
+2025-11-04 09:59:42,006 - acemd.minimizer - INFO -          299   -198474.5800          22.2183
+2025-11-04 09:59:42,032 - acemd.minimizer - INFO -          300   -198486.4172          25.8351
+2025-11-04 09:59:42,058 - acemd.minimizer - INFO -          301   -198503.7180          22.4041
+2025-11-04 09:59:42,084 - acemd.minimizer - INFO -          302   -198518.7684          21.9063
+2025-11-04 09:59:42,109 - acemd.minimizer - INFO -          303   -198530.8440          19.9598
+2025-11-04 09:59:42,136 - acemd.minimizer - INFO -          304   -198545.1212          22.8730
+2025-11-04 09:59:42,165 - acemd.minimizer - INFO -          305   -198555.9744          21.9749
+2025-11-04 09:59:42,192 - acemd.minimizer - INFO -          306   -198571.6697          17.8570
+2025-11-04 09:59:42,218 - acemd.minimizer - INFO -          307   -198585.0130          19.7988
+2025-11-04 09:59:42,245 - acemd.minimizer - INFO -          308   -198601.7925          16.6623
+2025-11-04 09:59:42,271 - acemd.minimizer - INFO -          309   -198614.7926          23.5017
+2025-11-04 09:59:42,297 - acemd.minimizer - INFO -          310   -198626.1320          15.3322
+2025-11-04 09:59:42,322 - acemd.minimizer - INFO -          311   -198636.8876          20.7803
+2025-11-04 09:59:42,348 - acemd.minimizer - INFO -          312   -198649.8239          17.2546
+2025-11-04 09:59:42,374 - acemd.minimizer - INFO -          313   -198662.4534          21.3550
+2025-11-04 09:59:42,400 - acemd.minimizer - INFO -          314   -198674.9366          15.9253
+2025-11-04 09:59:42,425 - acemd.minimizer - INFO -          315   -198688.3750          21.9980
+2025-11-04 09:59:42,452 - acemd.minimizer - INFO -          316   -198704.0103          26.0472
+2025-11-04 09:59:42,477 - acemd.minimizer - INFO -          317   -198715.3223          26.6515
+2025-11-04 09:59:42,503 - acemd.minimizer - INFO -          318   -198728.1916          17.2365
+2025-11-04 09:59:42,529 - acemd.minimizer - INFO -          319   -198741.8417          18.6037
+2025-11-04 09:59:42,555 - acemd.minimizer - INFO -          320   -198754.7967          22.1780
+2025-11-04 09:59:42,580 - acemd.minimizer - INFO -          321   -198768.5456          23.2275
+2025-11-04 09:59:42,606 - acemd.minimizer - INFO -          322   -198782.8665          17.5193
+2025-11-04 09:59:42,635 - acemd.minimizer - INFO -          323   -198792.2909          21.9001
+2025-11-04 09:59:42,661 - acemd.minimizer - INFO -          324   -198805.5299          21.2433
+2025-11-04 09:59:42,687 - acemd.minimizer - INFO -          325   -198814.7854          17.7318
+2025-11-04 09:59:42,713 - acemd.minimizer - INFO -          326   -198826.0389          14.6713
+2025-11-04 09:59:42,738 - acemd.minimizer - INFO -          327   -198836.5247          18.0763
+2025-11-04 09:59:42,764 - acemd.minimizer - INFO -          328   -198847.3491          17.7945
+2025-11-04 09:59:42,790 - acemd.minimizer - INFO -          329   -198858.9001          20.2478
+2025-11-04 09:59:42,816 - acemd.minimizer - INFO -          330   -198871.0192          19.4116
+2025-11-04 09:59:42,841 - acemd.minimizer - INFO -          331   -198882.9327          21.0803
+2025-11-04 09:59:42,867 - acemd.minimizer - INFO -          332   -198895.0116          23.1764
+2025-11-04 09:59:42,893 - acemd.minimizer - INFO -          333   -198907.3594          21.0793
+2025-11-04 09:59:42,918 - acemd.minimizer - INFO -          334   -198918.8808          19.8886
+2025-11-04 09:59:42,944 - acemd.minimizer - INFO -          335   -198930.1107          16.7050
+2025-11-04 09:59:42,970 - acemd.minimizer - INFO -          336   -198940.4515          22.0205
+2025-11-04 09:59:42,996 - acemd.minimizer - INFO -          337   -198950.6118          21.8043
+2025-11-04 09:59:43,021 - acemd.minimizer - INFO -          338   -198961.5554          20.5667
+2025-11-04 09:59:43,047 - acemd.minimizer - INFO -          339   -198972.6058          17.5142
+2025-11-04 09:59:43,072 - acemd.minimizer - INFO -          340   -198984.6013          17.2069
+2025-11-04 09:59:43,102 - acemd.minimizer - INFO -          341   -198998.0558          22.9535
+2025-11-04 09:59:43,128 - acemd.minimizer - INFO -          342   -199006.5624          21.5465
+2025-11-04 09:59:43,154 - acemd.minimizer - INFO -          343   -199015.8765          14.5257
+2025-11-04 09:59:43,179 - acemd.minimizer - INFO -          344   -199025.8271          17.0045
+2025-11-04 09:59:43,205 - acemd.minimizer - INFO -          345   -199036.6370          21.0273
+2025-11-04 09:59:43,230 - acemd.minimizer - INFO -          346   -199048.7336          20.9177
+2025-11-04 09:59:43,257 - acemd.minimizer - INFO -          347   -199061.9600          16.7259
+2025-11-04 09:59:43,282 - acemd.minimizer - INFO -          348   -199071.4831          16.4701
+2025-11-04 09:59:43,308 - acemd.minimizer - INFO -          349   -199083.0040          17.4606
+2025-11-04 09:59:43,334 - acemd.minimizer - INFO -          350   -199095.1833          17.2254
+2025-11-04 09:59:43,360 - acemd.minimizer - INFO -          351   -199106.3788          15.8397
+2025-11-04 09:59:43,386 - acemd.minimizer - INFO -          352   -199117.6515          18.9846
+2025-11-04 09:59:43,412 - acemd.minimizer - INFO -          353   -199131.0447          18.3883
+2025-11-04 09:59:43,438 - acemd.minimizer - INFO -          354   -199140.0906          16.4387
+2025-11-04 09:59:43,463 - acemd.minimizer - INFO -          355   -199150.4911          11.9263
+2025-11-04 09:59:43,489 - acemd.minimizer - INFO -          356   -199160.6599          13.9181
+2025-11-04 09:59:43,515 - acemd.minimizer - INFO -          357   -199171.7063          19.5193
+2025-11-04 09:59:43,540 - acemd.minimizer - INFO -          358   -199179.0915          19.6849
+2025-11-04 09:59:43,569 - acemd.minimizer - INFO -          359   -199188.8005          11.7333
+2025-11-04 09:59:43,595 - acemd.minimizer - INFO -          360   -199198.2486          12.5421
+2025-11-04 09:59:43,620 - acemd.minimizer - INFO -          361   -199208.5332          19.2415
+2025-11-04 09:59:43,646 - acemd.minimizer - INFO -          362   -199219.5891          17.5476
+2025-11-04 09:59:43,672 - acemd.minimizer - INFO -          363   -199231.4495          12.5070
+2025-11-04 09:59:43,697 - acemd.minimizer - INFO -          364   -199242.9524          15.0064
+2025-11-04 09:59:43,723 - acemd.minimizer - INFO -          365   -199255.0651          19.0005
+2025-11-04 09:59:43,750 - acemd.minimizer - INFO -          366   -199268.7933          18.0395
+2025-11-04 09:59:43,776 - acemd.minimizer - INFO -          367   -199278.7276          14.7214
+2025-11-04 09:59:43,802 - acemd.minimizer - INFO -          368   -199289.7833          16.0165
+2025-11-04 09:59:43,827 - acemd.minimizer - INFO -          369   -199299.8501          17.3157
+2025-11-04 09:59:43,853 - acemd.minimizer - INFO -          370   -199309.6021          17.0977
+2025-11-04 09:59:43,879 - acemd.minimizer - INFO -          371   -199319.2594          15.2609
+2025-11-04 09:59:43,904 - acemd.minimizer - INFO -          372   -199329.1017          14.3318
+2025-11-04 09:59:43,930 - acemd.minimizer - INFO -          373   -199339.6201          19.7152
+2025-11-04 09:59:43,956 - acemd.minimizer - INFO -          374   -199349.9394          20.3260
+2025-11-04 09:59:43,982 - acemd.minimizer - INFO -          375   -199359.8599          14.2875
+2025-11-04 09:59:44,007 - acemd.minimizer - INFO -          376   -199369.0882          14.8935
+2025-11-04 09:59:44,036 - acemd.minimizer - INFO -          377   -199378.9849          20.1035
+2025-11-04 09:59:44,062 - acemd.minimizer - INFO -          378   -199389.8825          23.6087
+2025-11-04 09:59:44,088 - acemd.minimizer - INFO -          379   -199401.8324          17.3771
+2025-11-04 09:59:44,114 - acemd.minimizer - INFO -          380   -199408.7340          15.0144
+2025-11-04 09:59:44,140 - acemd.minimizer - INFO -          381   -199417.0950          16.5048
+2025-11-04 09:59:44,166 - acemd.minimizer - INFO -          382   -199426.6305          23.0772
+2025-11-04 09:59:44,191 - acemd.minimizer - INFO -          383   -199436.4868          17.7986
+2025-11-04 09:59:44,217 - acemd.minimizer - INFO -          384   -199446.7364          13.2981
+2025-11-04 09:59:44,243 - acemd.minimizer - INFO -          385   -199456.6513          13.8640
+2025-11-04 09:59:44,268 - acemd.minimizer - INFO -          386   -199467.3440          26.7935
+2025-11-04 09:59:44,294 - acemd.minimizer - INFO -          387   -199474.6068          24.4726
+2025-11-04 09:59:44,320 - acemd.minimizer - INFO -          388   -199483.8985          18.0358
+2025-11-04 09:59:44,345 - acemd.minimizer - INFO -          389   -199492.5545          11.7017
+2025-11-04 09:59:44,371 - acemd.minimizer - INFO -          390   -199501.2788          22.7810
+2025-11-04 09:59:44,397 - acemd.minimizer - INFO -          391   -199510.2612          26.1621
+2025-11-04 09:59:44,423 - acemd.minimizer - INFO -          392   -199519.4413          16.9682
+2025-11-04 09:59:44,449 - acemd.minimizer - INFO -          393   -199528.6985          12.7411
+2025-11-04 09:59:44,474 - acemd.minimizer - INFO -          394   -199537.4181          18.5626
+2025-11-04 09:59:44,504 - acemd.minimizer - INFO -          395   -199545.2629          26.6058
+2025-11-04 09:59:44,529 - acemd.minimizer - INFO -          396   -199553.1581          21.6512
+2025-11-04 09:59:44,555 - acemd.minimizer - INFO -          397   -199560.3659          14.5436
+2025-11-04 09:59:44,581 - acemd.minimizer - INFO -          398   -199567.0509          13.0380
+2025-11-04 09:59:44,606 - acemd.minimizer - INFO -          399   -199576.8570          19.8552
+2025-11-04 09:59:44,632 - acemd.minimizer - INFO -          400   -199584.2709          22.0648
+2025-11-04 09:59:44,658 - acemd.minimizer - INFO -          401   -199590.6896          15.6862
+2025-11-04 09:59:44,683 - acemd.minimizer - INFO -          402   -199600.8835          14.9679
+2025-11-04 09:59:44,709 - acemd.minimizer - INFO -          403   -199609.2513          18.5534
+2025-11-04 09:59:44,734 - acemd.minimizer - INFO -          404   -199615.9385          22.9778
+2025-11-04 09:59:44,760 - acemd.minimizer - INFO -          405   -199622.6565          19.6662
+2025-11-04 09:59:44,786 - acemd.minimizer - INFO -          406   -199633.9780          14.2180
+2025-11-04 09:59:44,812 - acemd.minimizer - INFO -          407   -199642.0297          16.5098
+2025-11-04 09:59:44,837 - acemd.minimizer - INFO -          408   -199648.3302          19.1745
+2025-11-04 09:59:44,863 - acemd.minimizer - INFO -          409   -199654.7926          17.9066
+2025-11-04 09:59:44,888 - acemd.minimizer - INFO -          410   -199660.9313          12.4508
+2025-11-04 09:59:44,914 - acemd.minimizer - INFO -          411   -199666.6926          13.0508
+2025-11-04 09:59:44,940 - acemd.minimizer - INFO -          412   -199672.2374          20.5378
+2025-11-04 09:59:44,970 - acemd.minimizer - INFO -          413   -199679.6007          21.8606
+2025-11-04 09:59:44,995 - acemd.minimizer - INFO -          414   -199688.2393          17.3686
+2025-11-04 09:59:45,023 - acemd.minimizer - INFO -          415   -199697.1529          15.1391
+2025-11-04 09:59:45,051 - acemd.minimizer - INFO -          416   -199705.0096          13.9710
+2025-11-04 09:59:45,078 - acemd.minimizer - INFO -          417   -199712.5069          18.7638
+2025-11-04 09:59:45,107 - acemd.minimizer - INFO -          418   -199722.6984          20.0001
+2025-11-04 09:59:45,134 - acemd.minimizer - INFO -          419   -199731.3377          16.6240
+2025-11-04 09:59:45,160 - acemd.minimizer - INFO -          420   -199738.6445          18.5405
+2025-11-04 09:59:45,185 - acemd.minimizer - INFO -          421   -199744.5623          16.4330
+2025-11-04 09:59:45,212 - acemd.minimizer - INFO -          422   -199752.6512          16.4413
+2025-11-04 09:59:45,238 - acemd.minimizer - INFO -          423   -199759.9934          16.2450
+2025-11-04 09:59:45,263 - acemd.minimizer - INFO -          424   -199766.6963          12.5269
+2025-11-04 09:59:45,290 - acemd.minimizer - INFO -          425   -199775.1823          13.6638
+2025-11-04 09:59:45,315 - acemd.minimizer - INFO -          426   -199781.3030          15.9514
+2025-11-04 09:59:45,341 - acemd.minimizer - INFO -          427   -199790.5094          16.8115
+2025-11-04 09:59:45,368 - acemd.minimizer - INFO -          428   -199798.9443          15.0235
+2025-11-04 09:59:45,394 - acemd.minimizer - INFO -          429   -199807.2671          14.7402
+2025-11-04 09:59:45,420 - acemd.minimizer - INFO -          430   -199814.9406          17.7488
+2025-11-04 09:59:45,450 - acemd.minimizer - INFO -          431   -199822.2285          16.9835
+2025-11-04 09:59:45,476 - acemd.minimizer - INFO -          432   -199832.1848          14.9839
+2025-11-04 09:59:45,502 - acemd.minimizer - INFO -          433   -199839.7946          15.1466
+2025-11-04 09:59:45,528 - acemd.minimizer - INFO -          434   -199848.1427          17.4882
+2025-11-04 09:59:45,554 - acemd.minimizer - INFO -          435   -199853.5000          19.2390
+2025-11-04 09:59:45,579 - acemd.minimizer - INFO -          436   -199860.3654          15.5931
+2025-11-04 09:59:45,605 - acemd.minimizer - INFO -          437   -199868.1699          13.6502
+2025-11-04 09:59:45,631 - acemd.minimizer - INFO -          438   -199876.2616          13.2937
+2025-11-04 09:59:45,657 - acemd.minimizer - INFO -          439   -199883.2937          15.7343
+2025-11-04 09:59:45,682 - acemd.minimizer - INFO -          440   -199889.3410          16.8447
+2025-11-04 09:59:45,708 - acemd.minimizer - INFO -          441   -199898.4092          14.2174
+2025-11-04 09:59:45,734 - acemd.minimizer - INFO -          442   -199904.1417          15.8089
+2025-11-04 09:59:45,760 - acemd.minimizer - INFO -          443   -199910.1324          19.6921
+2025-11-04 09:59:45,785 - acemd.minimizer - INFO -          444   -199916.6474          19.7485
+2025-11-04 09:59:45,811 - acemd.minimizer - INFO -          445   -199925.3244          15.2186
+2025-11-04 09:59:45,837 - acemd.minimizer - INFO -          446   -199930.5450          14.1095
+2025-11-04 09:59:45,862 - acemd.minimizer - INFO -          447   -199936.6181          13.7304
+2025-11-04 09:59:45,888 - acemd.minimizer - INFO -          448   -199942.9145          14.7672
+2025-11-04 09:59:45,917 - acemd.minimizer - INFO -          449   -199949.5656          14.0830
+2025-11-04 09:59:45,943 - acemd.minimizer - INFO -          450   -199956.0605          14.4397
+2025-11-04 09:59:45,969 - acemd.minimizer - INFO -          451   -199964.2330          14.8096
+2025-11-04 09:59:45,994 - acemd.minimizer - INFO -          452   -199973.3111          16.0260
+2025-11-04 09:59:46,020 - acemd.minimizer - INFO -          453   -199978.4138          16.1080
+2025-11-04 09:59:46,046 - acemd.minimizer - INFO -          454   -199985.2371          17.1663
+2025-11-04 09:59:46,072 - acemd.minimizer - INFO -          455   -199991.2895          14.1604
+2025-11-04 09:59:46,097 - acemd.minimizer - INFO -          456   -199999.6722          14.0125
+2025-11-04 09:59:46,123 - acemd.minimizer - INFO -          457   -200004.8738          15.7896
+2025-11-04 09:59:46,148 - acemd.minimizer - INFO -          458   -200010.8158          14.8052
+2025-11-04 09:59:46,174 - acemd.minimizer - INFO -          459   -200018.6300          15.4243
+2025-11-04 09:59:46,200 - acemd.minimizer - INFO -          460   -200028.0760          15.7284
+2025-11-04 09:59:46,226 - acemd.minimizer - INFO -          461   -200033.0071          15.3533
+2025-11-04 09:59:46,251 - acemd.minimizer - INFO -          462   -200039.2673          15.2348
+2025-11-04 09:59:46,277 - acemd.minimizer - INFO -          463   -200047.7768          15.9669
+2025-11-04 09:59:46,302 - acemd.minimizer - INFO -          464   -200053.9867          14.3932
+2025-11-04 09:59:46,328 - acemd.minimizer - INFO -          465   -200062.1279          14.4868
+2025-11-04 09:59:46,354 - acemd.minimizer - INFO -          466   -200067.1475          13.9072
+2025-11-04 09:59:46,383 - acemd.minimizer - INFO -          467   -200072.9318          12.8819
+2025-11-04 09:59:46,409 - acemd.minimizer - INFO -          468   -200081.3965          14.9082
+2025-11-04 09:59:46,435 - acemd.minimizer - INFO -          469   -200087.4322          13.4886
+2025-11-04 09:59:46,460 - acemd.minimizer - INFO -          470   -200095.0253          14.8477
+2025-11-04 09:59:46,486 - acemd.minimizer - INFO -          471   -200099.7973          17.2010
+2025-11-04 09:59:46,511 - acemd.minimizer - INFO -          472   -200106.9040          15.7547
+2025-11-04 09:59:46,537 - acemd.minimizer - INFO -          473   -200113.0707          14.6962
+2025-11-04 09:59:46,562 - acemd.minimizer - INFO -          474   -200118.5127          14.0566
+2025-11-04 09:59:46,588 - acemd.minimizer - INFO -          475   -200126.9807          12.6481
+2025-11-04 09:59:46,614 - acemd.minimizer - INFO -          476   -200132.8788          13.6761
+2025-11-04 09:59:46,640 - acemd.minimizer - INFO -          477   -200141.3322          16.5233
+2025-11-04 09:59:46,665 - acemd.minimizer - INFO -          478   -200147.8685          14.4166
+2025-11-04 09:59:46,691 - acemd.minimizer - INFO -          479   -200153.1935          16.7683
+2025-11-04 09:59:46,717 - acemd.minimizer - INFO -          480   -200161.9024          13.2115
+2025-11-04 09:59:46,742 - acemd.minimizer - INFO -          481   -200169.0372          13.5435
+2025-11-04 09:59:46,768 - acemd.minimizer - INFO -          482   -200175.2769          15.9521
+2025-11-04 09:59:46,794 - acemd.minimizer - INFO -          483   -200180.9162          15.5093
+2025-11-04 09:59:46,819 - acemd.minimizer - INFO -          484   -200186.2444          17.5439
+2025-11-04 09:59:46,848 - acemd.minimizer - INFO -          485   -200194.7146          13.8062
+2025-11-04 09:59:46,874 - acemd.minimizer - INFO -          486   -200200.8316          15.2319
+2025-11-04 09:59:46,900 - acemd.minimizer - INFO -          487   -200205.4478          16.0633
+2025-11-04 09:59:46,925 - acemd.minimizer - INFO -          488   -200213.3020          14.2064
+2025-11-04 09:59:46,951 - acemd.minimizer - INFO -          489   -200220.0835          14.6944
+2025-11-04 09:59:46,977 - acemd.minimizer - INFO -          490   -200225.3777          13.6359
+2025-11-04 09:59:47,002 - acemd.minimizer - INFO -          491   -200230.1894          14.8798
+2025-11-04 09:59:47,028 - acemd.minimizer - INFO -          492   -200238.9879          12.8418
+2025-11-04 09:59:47,054 - acemd.minimizer - INFO -          493   -200245.9871          14.9564
+2025-11-04 09:59:47,079 - acemd.minimizer - INFO -          494   -200251.1347          14.8475
+2025-11-04 09:59:47,105 - acemd.minimizer - INFO -          495   -200258.9871          12.2095
+2025-11-04 09:59:47,131 - acemd.minimizer - INFO -          496   -200265.7071          14.9767
+2025-11-04 09:59:47,156 - acemd.minimizer - INFO -          497   -200271.2412          13.1724
+2025-11-04 09:59:47,182 - acemd.minimizer - INFO -          498   -200276.3708          15.0765
+2025-11-04 09:59:47,208 - acemd.minimizer - INFO -          499   -200281.1135          14.0861
+2025-11-04 09:59:47,208 - acemd.minimizer - INFO - # Writing minimized coordinates to "./minimized.coor"
+2025-11-04 09:59:47,222 - acemd.minimizer - INFO - # Completed minimization!
+2025-11-04 09:59:47,254 - acemd - INFO - #
+2025-11-04 09:59:47,254 - acemd - INFO - # Initial velocities
+2025-11-04 09:59:47,254 - acemd - INFO - #   Distribution: Maxwell-Boltzmann
+2025-11-04 09:59:47,254 - acemd - INFO - #   Temperature: 298.00 K
+2025-11-04 09:59:47,396 - acemd - INFO - #
+2025-11-04 09:59:47,396 - acemd - INFO - # Removing bonded terms for constrainted atoms
+2025-11-04 09:59:47,437 - acemd - INFO - #   Number of constraints: 46029
+2025-11-04 09:59:47,437 - acemd - INFO - #   Harmonic bond interations
+2025-11-04 09:59:47,437 - acemd - INFO - #     Initial number of terms: 47507
+2025-11-04 09:59:47,611 - acemd - INFO - #     Optimized number of terms: 1478
+2025-11-04 09:59:49,448 - acemd - INFO - #
+2025-11-04 09:59:49,448 - acemd - INFO - # Running simulation
+2025-11-04 09:59:49,448 - acemd - INFO - #   Current step: 0
+2025-11-04 09:59:49,448 - acemd - INFO - #   Number of steps: 2500000
+2025-11-04 09:59:49,448 - acemd - INFO - #   Trajectory period: 25000
+2025-11-04 09:59:49,448 - acemd - INFO - #
+2025-11-04 09:59:50,914 - acemd - INFO -       Step     Time Compl  Mean Sp  Curr Sp       ETA Completion date    Temp     Volume   Dens       Angle  Non-bonded  External 0  External 1    Dihedral        Bond   Potential     Kinetic       Total     k0     k1 
+2025-11-04 09:59:50,914 - acemd - INFO -                  ns     %   ns/day   ns/day   H:MM:SS  DD/MM HH:MM:SS       K        A^3 g/cm^3                                                                                                                           
+2025-11-04 10:00:11,570 - acemd - INFO -      25000     0.10   1.0   418.36   418.36  00:34:04  04/11 10:34:16  298.10  484444.38   1.00     1479.50  -157896.35       25.73       59.66     2197.66      523.26  -153610.54    28624.75  -124985.79   0.98   0.10 
+2025-11-04 10:00:32,213 - acemd - INFO -      50000     0.20   2.0   418.45   418.54  00:33:43  04/11 10:34:15  298.64  479908.65   1.01     1475.03  -158258.56       27.50       64.95     2200.89      543.28  -153946.92    28676.44  -125270.47   0.96   0.10 
+2025-11-04 10:00:53,083 - acemd - INFO -      75000     0.30   3.0   416.95   413.99  00:33:30  04/11 10:34:23  299.36  482698.80   1.00     1449.15  -158298.22       22.75       61.78     2200.38      536.82  -154027.34    28745.24  -125282.10   0.94   0.09 
+2025-11-04 10:01:13,958 - acemd - INFO -     100000     0.40   4.0   416.19   413.90  00:33:12  04/11 10:34:26  300.08  481144.56   1.01     1477.49  -158055.75       24.94       65.20     2203.05      519.41  -153765.67    28814.84  -124950.83   0.92   0.09 
+2025-11-04 10:01:34,594 - acemd - INFO -     125000     0.50   5.0   416.68   418.68  00:32:49  04/11 10:34:24  298.66  481696.97   1.00     1409.40  -158066.77       22.41       61.66     2203.42      525.96  -153843.92    28678.41  -125165.50   0.90   0.09 
+2025-11-04 10:01:55,424 - acemd - INFO -     150000     0.60   6.0   416.37   414.79  00:32:30  04/11 10:34:26  297.67  481605.76   1.00     1407.58  -157866.30       26.95       61.32     2189.46      579.22  -153601.76    28583.22  -125018.54   0.88   0.09 
+2025-11-04 10:02:16,165 - acemd - INFO -     175000     0.70   7.0   416.39   416.56  00:32:09  04/11 10:34:25  299.44  480110.42   1.01     1456.60  -157696.97       19.52       51.25     2180.43      519.73  -153469.44    28753.35  -124716.09   0.86   0.09 
+2025-11-04 10:02:36,907 - acemd - INFO -     200000     0.80   8.0   416.41   416.55  00:31:48  04/11 10:34:25  297.33  482159.54   1.00     1424.99  -158257.93       27.70       65.37     2207.99      563.75  -153968.14    28550.59  -125417.55   0.84   0.08 
+2025-11-04 10:02:57,644 - acemd - INFO -     225000     0.90   9.0   416.44   416.66  00:31:28  04/11 10:34:25  297.34  480927.90   1.01     1442.19  -158135.21       23.55       59.12     2195.47      481.75  -153933.13    28551.32  -125381.81   0.82   0.08 
+2025-11-04 10:03:18,527 - acemd - INFO -     250000     1.00  10.0   416.17   413.73  00:31:08  04/11 10:34:27  299.92  480200.38   1.01     1464.55  -158212.34       21.91       61.55     2192.42      496.76  -153975.15    28799.05  -125176.10   0.80   0.08 
+2025-11-04 10:03:39,583 - acemd - INFO -     275000     1.10  11.0   415.63   410.33  00:30:50  04/11 10:34:29  298.10  481648.25   1.00     1433.74  -158226.00       17.59       56.43     2179.26      509.17  -154029.81    28624.21  -125405.60   0.78   0.08 
+2025-11-04 10:04:00,674 - acemd - INFO -     300000     1.20  12.0   415.13   409.67  00:30:31  04/11 10:34:32  299.71  481926.65   1.00     1428.98  -158114.65       21.63       51.76     2198.72      545.75  -153867.81    28779.41  -125088.40   0.76   0.08 
+2025-11-04 10:04:21,531 - acemd - INFO -     325000     1.30  13.0   415.06   414.25  00:30:11  04/11 10:34:32  298.16  481570.78   1.00     1411.92  -158078.52       20.73       52.48     2190.16      515.19  -153888.03    28630.09  -125257.94   0.74   0.07 
+2025-11-04 10:04:42,416 - acemd - INFO -     350000     1.40  14.0   414.96   413.69  00:29:50  04/11 10:34:33  297.62  480665.83   1.01     1404.46  -157586.57       21.71       49.50     2206.03      543.97  -153360.89    28578.77  -124782.12   0.72   0.07 
+2025-11-04 10:05:03,357 - acemd - INFO -     375000     1.50  15.0   414.80   412.58  00:29:30  04/11 10:34:33  299.31  481116.48   1.01     1472.85  -158391.22       19.87       54.27     2183.10      491.47  -154169.66    28741.21  -125428.45   0.70   0.07 
+2025-11-04 10:05:24,169 - acemd - INFO -     400000     1.60  16.0   414.82   415.15  00:29:09  04/11 10:34:33  299.78  480571.51   1.01     1427.81  -158304.51       21.54       57.80     2201.82      568.84  -154026.71    28785.55  -125241.16   0.68   0.07 
+2025-11-04 10:05:44,986 - acemd - INFO -     425000     1.70  17.0   414.84   415.03  00:28:48  04/11 10:34:33  298.86  480482.65   1.01     1448.00  -158114.00       19.57       57.05     2218.42      522.49  -153848.47    28698.12  -125150.35   0.66   0.07 
+2025-11-04 10:06:05,701 - acemd - INFO -     450000     1.80  18.0   414.96   417.09  00:28:27  04/11 10:34:33  299.99  481776.45   1.00     1459.75  -157823.66       20.25       51.58     2193.09      535.25  -153563.73    28806.45  -124757.28   0.64   0.06 
+2025-11-04 10:06:26,506 - acemd - INFO -     475000     1.90  19.0   414.98   415.29  00:28:06  04/11 10:34:32  299.66  482579.16   1.00     1423.20  -158040.34       21.87       50.40     2189.54      533.00  -153822.32    28774.64  -125047.69   0.62   0.06 
+2025-11-04 10:06:47,230 - acemd - INFO -     500000     2.00  20.0   415.07   416.91  00:27:45  04/11 10:34:32  299.12  479215.57   1.01     1384.53  -158494.76       20.62       53.24     2197.98      514.92  -154323.48    28722.76  -125600.72   0.60   0.06 
+2025-11-04 10:07:07,999 - acemd - INFO -     525000     2.10  21.0   415.12   416.01  00:27:24  04/11 10:34:32  298.50  480535.24   1.01     1472.49  -158079.34       19.33       52.90     2214.14      498.15  -153822.33    28662.96  -125159.37   0.58   0.06 
+2025-11-04 10:07:28,785 - acemd - INFO -     550000     2.20  22.0   415.14   415.65  00:27:03  04/11 10:34:32  300.38  483718.21   1.00     1393.69  -157964.74       21.41       50.49     2202.10      565.20  -153731.86    28843.48  -124888.37   0.56   0.06 
+2025-11-04 10:07:49,473 - acemd - INFO -     575000     2.30  23.0   415.25   417.64  00:26:42  04/11 10:34:31  298.51  480738.79   1.01     1392.96  -158079.94       20.12       53.76     2210.44      546.00  -153856.66    28663.95  -125192.71   0.54   0.05 
+2025-11-04 10:08:10,395 - acemd - INFO -     600000     2.40  24.0   415.15   412.96  00:26:21  04/11 10:34:32  296.06  482154.30   1.00     1415.38  -157672.90       21.23       55.17     2204.80      543.11  -153433.21    28429.20  -125004.01   0.52   0.05 
+2025-11-04 10:08:31,077 - acemd - INFO -     625000     2.50  25.0   415.26   417.74  00:26:00  04/11 10:34:31  296.52  482807.31   1.00     1440.79  -157706.82       19.91       53.36     2191.66      515.29  -153485.81    28472.76  -125013.05   0.50   0.05 
+2025-11-04 10:08:51,911 - acemd - INFO -     650000     2.60  26.0   415.24   414.72  00:25:39  04/11 10:34:31  298.86  481397.11   1.01     1393.53  -158037.22       19.90       45.82     2230.12      525.79  -153822.07    28697.68  -125124.39   0.48   0.05 
+2025-11-04 10:09:12,769 - acemd - INFO -     675000     2.70  27.0   415.20   414.22  00:25:19  04/11 10:34:31  297.54  480571.26   1.01     1469.31  -158573.56       17.58       43.91     2202.36      532.06  -154308.34    28570.44  -125737.90   0.46   0.05 
+2025-11-04 10:09:33,710 - acemd - INFO -     700000     2.80  28.0   415.11   412.60  00:24:58  04/11 10:34:32  297.40  481710.70   1.00     1462.51  -158137.82       16.75       46.64     2201.00      551.85  -153859.08    28557.90  -125301.18   0.44   0.04 
+2025-11-04 10:09:54,327 - acemd - INFO -     725000     2.90  29.0   415.24   419.05  00:24:37  04/11 10:34:31  299.73  482537.56   1.00     1468.32  -158217.96       15.83       49.17     2206.07      538.73  -153939.83    28780.92  -125158.91   0.42   0.04 
+2025-11-04 10:10:15,168 - acemd - INFO -     750000     3.00  30.0   415.22   414.58  00:24:16  04/11 10:34:31  299.89  481335.66   1.01     1433.17  -158036.66       17.37       46.91     2170.26      520.31  -153848.64    28796.49  -125052.16   0.40   0.04 
+2025-11-04 10:10:36,012 - acemd - INFO -     775000     3.10  31.0   415.20   414.50  00:23:55  04/11 10:34:31  300.16  481690.84   1.00     1450.06  -157829.63       16.81       43.23     2217.55      535.02  -153566.95    28822.55  -124744.39   0.38   0.04 
+2025-11-04 10:10:56,807 - acemd - INFO -     800000     3.20  32.0   415.20   415.48  00:23:35  04/11 10:34:31  302.03  481527.38   1.00     1388.41  -158011.11       13.84       33.16     2188.91      536.95  -153849.84    29002.14  -124847.70   0.36   0.04 
+2025-11-04 10:11:17,725 - acemd - INFO -     825000     3.30  33.0   415.14   413.04  00:23:14  04/11 10:34:32  298.64  481740.85   1.00     1432.27  -158028.78       16.41       33.73     2208.33      514.63  -153823.42    28676.59  -125146.83   0.34   0.03 
+2025-11-04 10:11:38,398 - acemd - INFO -     850000     3.40  34.0   415.22   417.94  00:22:53  04/11 10:34:31  295.49  480066.17   1.01     1424.07  -158284.05       16.12       34.19     2215.26      541.95  -154052.46    28373.71  -125678.75   0.32   0.03 
+2025-11-04 10:11:59,252 - acemd - INFO -     875000     3.50  35.0   415.19   414.32  00:22:32  04/11 10:34:31  300.65  480170.38   1.01     1428.27  -157861.32       12.26       31.93     2188.74      541.69  -153658.43    28869.93  -124788.50   0.30   0.03 
+2025-11-04 10:12:19,998 - acemd - INFO -     900000     3.60  36.0   415.23   416.46  00:22:11  04/11 10:34:31  300.78  482322.67   1.00     1459.77  -158067.84       13.15       30.91     2216.49      569.63  -153777.88    28882.21  -124895.68   0.28   0.03 
+2025-11-04 10:12:40,926 - acemd - INFO -     925000     3.70  37.0   415.17   412.86  00:21:51  04/11 10:34:32  298.50  479980.24   1.01     1423.80  -158075.02       13.18       33.25     2209.27      516.45  -153879.08    28662.93  -125216.14   0.26   0.03 
+2025-11-04 10:13:01,786 - acemd - INFO -     950000     3.80  38.0   415.14   414.17  00:21:30  04/11 10:34:32  301.07  482337.65   1.00     1445.29  -157900.91       12.84       29.87     2176.50      591.78  -153644.64    28910.19  -124734.45   0.24   0.02 
+2025-11-04 10:13:22,649 - acemd - INFO -     975000     3.90  39.0   415.11   414.13  00:21:09  04/11 10:34:32  298.60  481452.50   1.01     1433.55  -157854.84       10.39       27.46     2206.87      541.05  -153635.51    28672.79  -124962.72   0.22   0.02 
+2025-11-04 10:13:43,358 - acemd - INFO -    1000000     4.00  40.0   415.16   417.21  00:20:48  04/11 10:34:32  299.16  480437.69   1.01     1473.84  -157911.01       12.89       29.59     2216.30      521.09  -153657.29    28726.21  -124931.08   0.20   0.02 
+2025-11-04 10:14:04,029 - acemd - INFO -    1025000     4.10  41.0   415.23   417.98  00:20:27  04/11 10:34:31  300.94  482611.36   1.00     1469.29  -157901.29       13.51       27.79     2202.04      509.92  -153678.73    28897.70  -124781.03   0.18   0.02 
+2025-11-04 10:14:24,809 - acemd - INFO -    1050000     4.20  42.0   415.25   415.78  00:20:06  04/11 10:34:31  300.25  482623.32   1.00     1412.43  -157843.44       11.03       25.94     2219.78      539.37  -153634.88    28831.09  -124803.79   0.16   0.02 
+2025-11-04 10:14:45,581 - acemd - INFO -    1075000     4.30  43.0   415.26   415.95  00:19:45  04/11 10:34:31  298.75  479953.57   1.01     1428.93  -157891.66       10.24       24.80     2209.59      521.32  -153696.78    28687.09  -125009.69   0.14   0.01 
+2025-11-04 10:15:06,290 - acemd - INFO -    1100000     4.40  44.0   415.31   417.20  00:19:25  04/11 10:34:31  298.76  479725.53   1.01     1442.42  -158044.35       10.82       20.57     2170.68      520.11  -153879.75    28688.51  -125191.25   0.12   0.01 
+2025-11-04 10:15:26,981 - acemd - INFO -    1125000     4.50  45.0   415.36   417.58  00:19:04  04/11 10:34:31  298.58  480424.81   1.01     1453.08  -158107.60        8.91       19.01     2210.78      533.72  -153882.10    28670.74  -125211.36   0.10   0.01 
+2025-11-04 10:15:47,753 - acemd - INFO -    1150000     4.60  46.0   415.37   415.94  00:18:43  04/11 10:34:30  299.48  482099.16   1.00     1395.84  -158257.58        8.45       15.90     2212.74      554.41  -154070.25    28757.19  -125313.06   0.08   0.01 
+2025-11-04 10:16:08,529 - acemd - INFO -    1175000     4.70  47.0   415.38   415.86  00:18:22  04/11 10:34:30  295.65  479972.01   1.01     1460.65  -158077.02        7.38       11.75     2176.84      538.83  -153881.56    28389.34  -125492.22   0.06   0.01 
+2025-11-04 10:16:29,303 - acemd - INFO -    1200000     4.80  48.0   415.39   415.90  00:18:01  04/11 10:34:30  297.75  481632.42   1.00     1432.25  -157990.19        5.56        9.19     2221.76      544.88  -153776.55    28591.51  -125185.05   0.04   0.00 
+2025-11-04 10:16:50,163 - acemd - INFO -    1225000     4.90  49.0   415.37   414.19  00:17:40  04/11 10:34:31  299.87  482216.95   1.00     1421.16  -157970.95        5.93        7.00     2199.13      513.83  -153823.90    28794.47  -125029.43   0.02   0.00 
+2025-11-04 10:17:10,842 - acemd - INFO -    1250000     5.00  50.0   415.42   417.83  00:17:19  04/11 10:34:30  300.05  481708.68   1.00     1434.31  -158123.70        0.00        0.00     2215.33      523.87  -153950.19    28812.05  -125138.14   0.00   0.00 
+2025-11-04 10:17:31,564 - acemd - INFO -    1275000     5.10  51.0   415.44   416.94  00:16:59  04/11 10:34:30  296.65  481977.38   1.00     1381.27  -157851.78        0.00        0.00     2235.92      551.56  -153683.03    28485.07  -125197.96   0.00   0.00 
+2025-11-04 10:17:52,187 - acemd - INFO -    1300000     5.20  52.0   415.51   418.95  00:16:38  04/11 10:34:30  297.31  479979.11   1.01     1470.73  -158001.16        0.00        0.00     2200.09      531.99  -153798.35    28548.91  -125249.43   0.00   0.00 
+2025-11-04 10:18:12,840 - acemd - INFO -    1325000     5.30  53.0   415.56   418.35  00:16:17  04/11 10:34:30  299.62  479971.68   1.01     1445.80  -158370.14        0.00        0.00     2196.80      553.43  -154174.10    28770.35  -125403.75   0.00   0.00 
+2025-11-04 10:18:33,340 - acemd - INFO -    1350000     5.40  54.0   415.67   421.46  00:15:56  04/11 10:34:29  299.46  481078.92   1.01     1478.50  -158104.08        0.00        0.00     2214.64      530.87  -153880.06    28755.11  -125124.95   0.00   0.00 
+2025-11-04 10:18:53,969 - acemd - INFO -    1375000     5.50  55.0   415.73   418.83  00:15:35  04/11 10:34:29  299.36  483335.94   1.00     1436.10  -157783.10        0.00        0.00     2228.45      552.41  -153566.13    28745.90  -124820.24   0.00   0.00 
+2025-11-04 10:19:14,521 - acemd - INFO -    1400000     5.60  56.0   415.81   420.40  00:15:14  04/11 10:34:28  298.70  481964.70   1.00     1432.70  -158513.67        0.00        0.00     2177.73      534.40  -154368.84    28682.00  -125686.84   0.00   0.00 
+2025-11-04 10:19:35,005 - acemd - INFO -    1425000     5.70  57.0   415.92   421.78  00:14:53  04/11 10:34:28  298.38  481497.99   1.00     1496.09  -158189.60        0.00        0.00     2197.66      506.13  -153989.72    28651.58  -125338.14   0.00   0.00 
+2025-11-04 10:19:55,573 - acemd - INFO -    1450000     5.80  58.0   415.99   420.07  00:14:32  04/11 10:34:27  299.80  483199.47   1.00     1443.64  -158226.18        0.00        0.00     2201.30      523.60  -154057.64    28787.71  -125269.93   0.00   0.00 
+2025-11-04 10:20:16,153 - acemd - INFO -    1475000     5.90  59.0   416.05   419.82  00:14:11  04/11 10:34:27  296.69  481690.13   1.00     1458.47  -158042.07        0.00        0.00     2166.86      546.72  -153870.03    28489.42  -125380.61   0.00   0.00 
+2025-11-04 10:20:36,970 - acemd - INFO -    1500000     6.00  60.0   416.03   415.07  00:13:50  04/11 10:34:27  297.43  481443.56   1.01     1438.58  -158240.77        0.00        0.00     2226.46      519.29  -154056.45    28559.97  -125496.47   0.00   0.00 
+2025-11-04 10:20:57,603 - acemd - INFO -    1525000     6.10  61.0   416.08   418.73  00:13:29  04/11 10:34:27  298.92  482468.37   1.00     1490.21  -157964.00        0.00        0.00     2204.11      507.94  -153761.74    28703.28  -125058.46   0.00   0.00 
+2025-11-04 10:21:18,244 - acemd - INFO -    1550000     6.20  62.0   416.12   418.58  00:13:09  04/11 10:34:27  299.19  481523.19   1.00     1434.93  -157916.04        0.00        0.00     2186.50      568.62  -153726.00    28729.69  -124996.32   0.00   0.00 
+2025-11-04 10:21:38,970 - acemd - INFO -    1575000     6.30  63.0   416.13   416.89  00:12:48  04/11 10:34:27  298.59  483440.21   1.00     1401.87  -158009.25        0.00        0.00     2202.90      530.08  -153874.40    28671.29  -125203.11   0.00   0.00 
+2025-11-04 10:21:59,534 - acemd - INFO -    1600000     6.40  64.0   416.19   420.14  00:12:27  04/11 10:34:26  298.60  483335.11   1.00     1465.99  -157903.60        0.00        0.00     2190.48      550.46  -153696.66    28672.23  -125024.43   0.00   0.00 
+2025-11-04 10:22:20,226 - acemd - INFO -    1625000     6.50  65.0   416.21   417.56  00:12:06  04/11 10:34:26  297.32  480890.69   1.01     1480.25  -158107.13        0.00        0.00     2215.54      515.63  -153895.72    28549.43  -125346.29   0.00   0.00 
+2025-11-04 10:22:40,935 - acemd - INFO -    1650000     6.60  66.0   416.23   417.22  00:11:45  04/11 10:34:26  298.36  482163.62   1.00     1462.45  -157974.86        0.00        0.00     2197.77      568.36  -153746.28    28650.01  -125096.27   0.00   0.00 
+2025-11-04 10:23:01,474 - acemd - INFO -    1675000     6.70  67.0   416.29   420.64  00:11:24  04/11 10:34:26  298.21  480687.19   1.01     1390.79  -157916.51        0.00        0.00     2194.15      531.23  -153800.34    28635.63  -125164.71   0.00   0.00 
+2025-11-04 10:23:22,033 - acemd - INFO -    1700000     6.80  68.0   416.35   420.27  00:11:04  04/11 10:34:26  297.67  481468.31   1.00     1448.45  -158192.30        0.00        0.00     2202.17      536.66  -154005.02    28583.20  -125421.82   0.00   0.00 
+2025-11-04 10:23:42,627 - acemd - INFO -    1725000     6.90  69.0   416.40   419.55  00:10:43  04/11 10:34:25  301.10  482313.00   1.00     1416.66  -157929.01        0.00        0.00     2191.98      509.67  -153810.70    28912.77  -124897.93   0.00   0.00 
+2025-11-04 10:24:03,128 - acemd - INFO -    1750000     7.00  70.0   416.47   421.44  00:10:22  04/11 10:34:25  298.21  481919.05   1.00     1404.91  -157809.24        0.00        0.00     2227.37      545.83  -153631.13    28634.84  -124996.29   0.00   0.00 
+2025-11-04 10:24:23,863 - acemd - INFO -    1775000     7.10  71.0   416.47   416.67  00:10:01  04/11 10:34:25  300.79  479999.16   1.01     1469.43  -158185.54        0.00        0.00     2202.58      568.63  -153944.91    28883.31  -125061.59   0.00   0.00 
+2025-11-04 10:24:44,578 - acemd - INFO -    1800000     7.20  72.0   416.48   417.10  00:09:40  04/11 10:34:25  296.17  480832.79   1.01     1405.11  -157893.92        0.00        0.00     2193.45      514.25  -153781.11    28439.29  -125341.82   0.00   0.00 
+2025-11-04 10:25:05,194 - acemd - INFO -    1825000     7.30  73.0   416.52   419.09  00:09:20  04/11 10:34:25  297.43  482544.70   1.00     1482.88  -157891.40        0.00        0.00     2197.85      534.92  -153675.75    28559.86  -125115.88   0.00   0.00 
+2025-11-04 10:25:25,889 - acemd - INFO -    1850000     7.40  74.0   416.53   417.50  00:08:59  04/11 10:34:25  301.38  479915.65   1.01     1406.98  -158209.38        0.00        0.00     2185.11      546.85  -154070.44    28939.62  -125130.82   0.00   0.00 
+2025-11-04 10:25:46,493 - acemd - INFO -    1875000     7.50  75.0   416.57   419.33  00:08:38  04/11 10:34:25  296.52  481306.05   1.01     1459.60  -158481.40        0.00        0.00     2211.56      554.41  -154255.83    28472.70  -125783.12   0.00   0.00 
+2025-11-04 10:26:07,254 - acemd - INFO -    1900000     7.60  76.0   416.56   416.16  00:08:17  04/11 10:34:25  300.27  483255.93   1.00     1418.43  -157999.78        0.00        0.00     2186.68      535.22  -153859.46    28832.94  -125026.52   0.00   0.00 
+2025-11-04 10:26:27,703 - acemd - INFO -    1925000     7.70  77.0   416.64   422.51  00:07:56  04/11 10:34:24  301.68  481928.14   1.00     1487.07  -157964.52        0.00        0.00     2179.88      510.41  -153787.16    28968.37  -124818.78   0.00   0.00 
+2025-11-04 10:26:48,177 - acemd - INFO -    1950000     7.80  78.0   416.71   422.01  00:07:36  04/11 10:34:24  299.38  483005.67   1.00     1470.09  -158324.74        0.00        0.00     2218.33      543.11  -154093.20    28747.77  -125345.43   0.00   0.00 
+2025-11-04 10:27:08,838 - acemd - INFO -    1975000     7.90  79.0   416.72   418.17  00:07:15  04/11 10:34:24  299.01  480784.55   1.01     1428.46  -158361.82        0.00        0.00     2194.91      517.94  -154220.51    28711.83  -125508.67   0.00   0.00 
+2025-11-04 10:27:29,477 - acemd - INFO -    2000000     8.00  80.0   416.75   418.63  00:06:54  04/11 10:34:24  296.20  481305.70   1.01     1443.33  -158060.98        0.00        0.00     2194.25      530.88  -153892.52    28441.83  -125450.70   0.00   0.00 
+2025-11-04 10:27:50,135 - acemd - INFO -    2025000     8.10  81.0   416.77   418.24  00:06:33  04/11 10:34:24  300.60  481183.88   1.01     1380.25  -158068.54        0.00        0.00     2183.47      567.71  -153937.11    28864.36  -125072.75   0.00   0.00 
+2025-11-04 10:28:10,817 - acemd - INFO -    2050000     8.20  82.0   416.78   417.76  00:06:13  04/11 10:34:23  301.06  482902.62   1.00     1474.39  -158031.58        0.00        0.00     2204.23      536.43  -153816.53    28908.55  -124907.99   0.00   0.00 
+2025-11-04 10:28:31,342 - acemd - INFO -    2075000     8.30  83.0   416.83   420.95  00:05:52  04/11 10:34:23  300.01  481716.16   1.00     1503.01  -158079.74        0.00        0.00     2177.31      590.35  -153809.07    28807.74  -125001.32   0.00   0.00 
+2025-11-04 10:28:51,922 - acemd - INFO -    2100000     8.40  84.0   416.86   419.82  00:05:31  04/11 10:34:23  295.96  482497.91   1.00     1463.37  -158038.35        0.00        0.00     2161.55      559.26  -153854.17    28418.95  -125435.22   0.00   0.00 
+2025-11-04 10:29:12,399 - acemd - INFO -    2125000     8.50  85.0   416.92   421.93  00:05:10  04/11 10:34:23  298.82  481038.91   1.01     1410.11  -158179.64        0.00        0.00     2166.28      552.33  -154050.92    28694.09  -125356.83   0.00   0.00 
+2025-11-04 10:29:32,948 - acemd - INFO -    2150000     8.60  86.0   416.96   420.47  00:04:50  04/11 10:34:23  299.21  482211.45   1.00     1411.77  -157883.37        0.00        0.00     2216.97      539.35  -153715.28    28731.61  -124983.67   0.00   0.00 
+2025-11-04 10:29:53,502 - acemd - INFO -    2175000     8.70  87.0   417.00   420.35  00:04:29  04/11 10:34:22  299.68  481297.88   1.01     1416.56  -158213.02        0.00        0.00     2187.88      566.04  -154042.54    28776.34  -125266.20   0.00   0.00 
+2025-11-04 10:30:14,181 - acemd - INFO -    2200000     8.80  88.0   417.01   417.82  00:04:08  04/11 10:34:22  298.87  481495.64   1.00     1480.44  -158293.44        0.00        0.00     2205.78      526.06  -154081.15    28698.77  -125382.38   0.00   0.00 
+2025-11-04 10:30:34,733 - acemd - INFO -    2225000     8.90  89.0   417.05   420.40  00:03:47  04/11 10:34:22  297.10  481048.29   1.01     1427.09  -158330.68        0.00        0.00     2200.99      522.13  -154180.47    28528.37  -125652.10   0.00   0.00 
+2025-11-04 10:30:55,384 - acemd - INFO -    2250000     9.00  90.0   417.06   418.37  00:03:27  04/11 10:34:22  298.30  482150.53   1.00     1460.65  -158179.35        0.00        0.00     2199.64      539.68  -153979.37    28644.15  -125335.22   0.00   0.00 
+2025-11-04 10:31:16,059 - acemd - INFO -    2275000     9.10  91.0   417.07   417.90  00:03:06  04/11 10:34:22  298.13  482268.89   1.00     1408.88  -158093.64        0.00        0.00     2184.30      546.61  -153953.85    28627.29  -125326.56   0.00   0.00 
+2025-11-04 10:31:36,831 - acemd - INFO -    2300000     9.20  92.0   417.06   415.95  00:02:45  04/11 10:34:22  300.62  481420.17   1.01     1475.21  -157870.90        0.00        0.00     2214.26      556.83  -153624.60    28866.77  -124757.83   0.00   0.00 
+2025-11-04 10:31:57,549 - acemd - INFO -    2325000     9.30  93.0   417.06   417.02  00:02:25  04/11 10:34:22  300.89  481921.55   1.00     1450.51  -158350.86        0.00        0.00     2192.83      563.05  -154144.46    28892.10  -125252.36   0.00   0.00 
+2025-11-04 10:32:18,143 - acemd - INFO -    2350000     9.40  94.0   417.09   419.54  00:02:04  04/11 10:34:22  298.97  482406.59   1.00     1428.15  -158338.15        0.00        0.00     2197.23      560.51  -154152.26    28708.44  -125443.82   0.00   0.00 
+2025-11-04 10:32:38,709 - acemd - INFO -    2375000     9.50  95.0   417.12   420.11  00:01:43  04/11 10:34:22  301.00  481020.28   1.01     1427.03  -157869.45        0.00        0.00     2207.86      539.70  -153694.86    28903.36  -124791.50   0.00   0.00 
+2025-11-04 10:32:59,464 - acemd - INFO -    2400000     9.60  96.0   417.11   416.29  00:01:22  04/11 10:34:22  299.13  481713.99   1.00     1402.82  -158038.27        0.00        0.00     2231.96      521.74  -153881.76    28723.13  -125158.62   0.00   0.00 
+2025-11-04 10:33:20,174 - acemd - INFO -    2425000     9.70  97.0   417.11   417.20  00:01:02  04/11 10:34:22  299.17  482041.99   1.00     1379.75  -158181.21        0.00        0.00     2181.96      543.58  -154075.92    28727.66  -125348.25   0.00   0.00 
+2025-11-04 10:33:40,806 - acemd - INFO -    2450000     9.80  98.0   417.13   418.77  00:00:41  04/11 10:34:22  300.41  482835.39   1.00     1472.65  -157917.97        0.00        0.00     2170.04      555.25  -153720.03    28846.36  -124873.68   0.00   0.00 
+2025-11-04 10:34:01,461 - acemd - INFO -    2475000     9.90  99.0   417.14   418.29  00:00:20  04/11 10:34:22  299.14  481228.50   1.01     1494.25  -158205.89        0.00        0.00     2229.05      557.98  -153924.61    28724.37  -125200.23   0.00   0.00 
+2025-11-04 10:34:22,134 - acemd - INFO -    2500000    10.00 100.0   417.15   417.94  00:00:00  04/11 10:34:22  299.82  481696.01   1.00     1424.43  -158209.62        0.00        0.00     2179.15      551.11  -154054.93    28789.93  -125265.00   0.00   0.00 
+2025-11-04 10:34:22,154 - acemd - INFO - # Writing final coordinates to 'output.coor'
+2025-11-04 10:34:22,164 - acemd - INFO - # Writing final velocities to 'output.vel'
+2025-11-04 10:34:22,171 - acemd - INFO - # Writing final simulation box size to 'output.xsc'
+2025-11-04 10:34:22,172 - acemd - INFO - #
+2025-11-04 10:34:22,172 - acemd - INFO - # Simulation completed!
+HTMD: Logging setup failed

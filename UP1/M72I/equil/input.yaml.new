@@ -1,0 +1,44 @@
+barostat: true
+barostatpressure: 1.01325
+boxsize:
+- 95.15299987792969
+- 72.61700439453125
+- 88.44000244140625
+coordinates: structure.pdb
+cutoff: 9
+extforces:
+- axes: xyz
+  fbwidth:
+  - 0.0
+  - 0.0
+  - 0.0
+  sel: protein and name CA
+  setpoints:
+  - 1@0
+  - 0@1250000
+  type: positionalRestraint
+- axes: xyz
+  fbwidth:
+  - 0.0
+  - 0.0
+  - 0.0
+  sel: protein and noh and not name CA
+  setpoints:
+  - 0.1@0
+  - 0@1250000
+  type: positionalRestraint
+minimize: 500
+pme: true
+restart: true
+run: 2500000
+slowperiod: 1
+structure: structure.prmtop
+switchdistance: 7.5
+switching: true
+thermostat: true
+thermostatdamping: 1
+thermostattemperature: 298
+timestep: 4
+trajectoryfile: output.xtc
+trajectoryperiod: 25000
+velocities: 298

@@ -1,0 +1,25 @@
+#!/bin/bash
+#BSUB -J my_jobname
+#BSUB -q tolbertgpu
+#BSUB -gpu num=1:mig=2
+#BSUB -o my_job.out
+#BSUB "rusage[mem=8GB]"
+#BSUB -M 8G -hl
+
+# Change to your simulation directory
+cd /project/tolbert_shared/vas/MDsims/PCBP1/L100Q
+
+# Load CUDA module
+module load cuda/12.4
+
+# Initialize conda
+source /home/srp106/anaconda3/etc/profile.d/conda.sh
+
+# Activate htmd environment
+conda activate htmd
+
+# Your actual commands go here
+python3 s4_Adaptive_Sampling_test_200ns.py
+
+# Deactivate conda when done (optional)
+#conda deactivate

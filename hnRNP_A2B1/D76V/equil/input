@@ -1,0 +1,24 @@
+#
+barostat             	on
+barostatpressure     	1.01325
+boxsize              	92.19099426269531 82.25800323486328 67.01499938964844
+coordinates          	structure.pdb
+cutoff               	9
+minimize             	500
+parmfile             	parameters
+pme                  	on
+restart              	on
+slowperiod           	1
+structure            	structure.prmtop
+switchdistance       	7.5
+switching            	on
+temperature          	298
+thermostat           	on
+thermostatdamping    	1
+thermostattemperature	298
+timestep             	4
+trajectoryfile       	output.xtc
+trajectoryperiod     	25000
+atomRestraint        	"protein and name CA" axes xyz width "0" setpoints 1@0 0@1250000
+atomRestraint        	"protein and noh and not name CA" axes xyz width "0" setpoints 0.1@0 0@1250000
+run                  	2500000
