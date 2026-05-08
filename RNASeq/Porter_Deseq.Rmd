@@ -1,0 +1,92 @@
+---
+title: ""
+output: html_document
+date: "2024-08-26"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tximport)
+library(DESeq2)
+library(org.Hs.eg.db)
+
+
+rm(list=ls())
+setwd(dir = "~")
+
+#Loading the files
+files <- list.files(pattern = "\\.genes.results$")
+txi.rsem <- tximport(files, type = "rsem", txIn = FALSE, txOut = FALSE)
+txi.rsem$length[txi.rsem$length == 0] <- 1
+
+#Design
+sample<-sapply(files,function(x){strsplit(x,"[.]")[[1]][1]})
+condition<-factor(c("KD","KD","Control","Control",
+                    "KD_WT","KD_WT","KD_L100","KD_L100"),levels=c("KD","Control","KD_WT","KD_L100"))
+sampleInfo<-data.frame(sample,condition)
+sampleInfo
+
+#Reading into DESEQ2
+deseqdata <- DESeqDataSetFromTximport(txi.rsem, colData = sampleInfo, design = ~condition)
+deseqdata
+
+# pre-filtering- Averaging at 5 per sample
+keep <- rowSums(counts(deseqdata)) >= 40 #average of 5 per sample 
+deseqdata <- deseqdata[keep,] #15542
+
+#checking the factor levels
+deseqdata$condition
+
+#Running DESEQ
+deseqdata<-DESeq(deseqdata)
+
+#Looking at the variability between replicates
+vsd <- vst(deseqdata)
+plotPCA(vsd, "condition")
+
+### Comparing fold change in mutant vs wildtype
+resultsNames(deseqdata)
+
+#condition_Control_vs_KD
+res<-data.frame(results(deseqdata,name="condition_Control_vs_KD"))
+res$Genes<-rownames(res)
+res <- res %>% mutate(gene_type = case_when(log2FoldChange >= 1 & padj <= 0.05 ~ "up",
+                                            log2FoldChange <= -1 & padj <= 0.05 ~ "down",
+                                            TRUE ~ "ns"))
+res$Gene_Sym<-mapIds(org.Hs.eg.db,keys = res$Genes,column = "SYMBOL",keytype="ENSEMBL",multiVals = "first")
+write.table(res,"Control_vs_KD_DESEQ.txt",sep="\t",col.names = T,row.names = F,quote=F)
+
+#condition_KD_WT_vs_KD
+res<-data.frame(results(deseqdata,name="condition_KD_WT_vs_KD"))
+res$Genes<-rownames(res)
+res <- res %>% mutate(gene_type = case_when(log2FoldChange >= 1 & padj <= 0.05 ~ "up",
+                                            log2FoldChange <= -1 & padj <= 0.05 ~ "down",
+                                            TRUE ~ "ns"))
+res$Gene_Sym<-mapIds(org.Hs.eg.db,keys = res$Genes,column = "SYMBOL",keytype="ENSEMBL",multiVals = "first")
+write.table(res,"KD_WT_vs_KD_DESEQ.txt",sep="\t",col.names = T,row.names = F,quote=F)
+
+#condition_KD_L100_vs_KD
+res<-data.frame(results(deseqdata,name="condition_KD_L100_vs_KD"))
+res$Genes<-rownames(res)
+res <- res %>% mutate(gene_type = case_when(log2FoldChange >= 1 & padj <= 0.05 ~ "up",
+                                            log2FoldChange <= -1 & padj <= 0.05 ~ "down",
+                                            TRUE ~ "ns"))
+res$Gene_Sym<-mapIds(org.Hs.eg.db,keys = res$Genes,column = "SYMBOL",keytype="ENSEMBL",multiVals = "first")
+write.table(res,"KD_L100_vs_KD_DESEQ.txt",sep="\t",col.names = T,row.names = F,quote=F)
+
+```
+
+
+
+
+
+
+
+
+
+
